@@ -1,0 +1,11 @@
+프론트엔드의 리엑트 프로젝트로 옮길 .html 코드 파일입니다.(bootstrap 4.6)
+
+pages 관련 파일들을 작성하여 리엑트로 옮기고
+components 관련 코드 파일은 mui 같은 외부 라이브러리를 이용할 생각이나 여기서도 구현할 수 있는건 구현해볼 생각입니다.
+
+
+HTML/JSX 클래스명 → sub-card (케밥 케이스)
+React 컴포넌트 이름 → SubCard (파스칼 케이스)
+
+html 클래스 class
+React 클래스 className
