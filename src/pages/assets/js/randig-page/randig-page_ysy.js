@@ -1,4 +1,4 @@
-// 최소 설정 (반응형: 로고 2→3→5개 노출)
+// swiper (반응형: 로고 2→3→5개 노출)
 var partnersSwiper = new Swiper('.partners-slider', {
    loop: true,
    slidesPerView: 2,
