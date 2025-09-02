@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+      <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet" />
+      <title>Stitch Design</title>
+      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <style type="text/tailwindcss">
+         :root {
+            --primary-color: #13a4ec;
+         }
+         .keyword-card {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            background-color: rgba(28, 35, 39, 0.8);
+            border: 1px solid #3b4b54;
+            border-radius: 9999px;
+            backdrop-filter: blur(5px);
+            color: white;
+            transition: all 0.3s ease-in-out;
+         }
+         .keyword-card:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background-color: rgba(28, 35, 39, 1);
+         }
+         .keyword-card .material-symbols-outlined {
+            transition: transform 0.3s ease-in-out;
+         }
+         #keyword1 {
+            top: 20%;
+            left: 85%;
+         }
+         #keyword1:hover .material-symbols-outlined {
+            transform: rotate(45deg);
+         }
+         #keyword2 {
+            top: 80%;
+            left: 85%;
+         }
+         #keyword2:hover .material-symbols-outlined {
+            transform: rotate(135deg);
+         }
+         #keyword3 {
+            top: 80%;
+            left: 15%;
+         }
+         #keyword3:hover .material-symbols-outlined {
+            transform: rotate(-135deg);
+         }
+         #keyword4 {
+            top: 20%;
+            left: 15%;
+         }
+         #keyword4:hover .material-symbols-outlined {
+            transform: rotate(-45deg);
+         }
+      </style>
+   </head>
+   <body class="bg-[#111714]">
+      <!-- section 1 -->
+      <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden" style="font-family: 'Spline Sans', 'Noto Sans', sans-serif">
+         <div class="flex-grow flex flex-col justify-center items-center text-center text-white relative">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div class="absolute bottom-0 w-full h-1/2 overflow-hidden">
+               <img
+                  alt="Earth from space"
+                  class="w-full h-auto object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDVfuSZkielZOiNKUXRH3yJCeilczjbi_Up7dCWYiqPzGys2z38TvSLXBX1yAnBJ1ViReT5aW_-XBVMaoaAqnZ8OrXXSniGFEa9gLqfe7DeB4ND4DcaEA7J5PNzzom_SOzjXE6pS7yf28lTeugBkWVZENNkwlf5UjelL_D0Bd75oaKeXOR0kGMoGnxx3E4GufL_I8zveieoOYR1nMJ-YXoAydhEnd67Xpafb90EFoXvvbt-ddBtVoJnhGffIX4wICUrggSO6Q6ZsA"
+                  style="object-position: 50% 0%"
+               />
+            </div>
+            <div class="relative z-10 p-8 space-y-8">
+               <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-tight">AAA BBB CCC DDD EEE FFF</h1>
+               <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-300">Join us in our mission to create a more sustainable future for our planet. Your actions today will shape the world of tomorrow.</p>
+               <button class="inline-flex items-center justify-center rounded-full h-12 px-8 bg-[#38e07b] text-[#111714] text-lg font-bold transition-transform hover:scale-105">Get Started</button>
+            </div>
+         </div>
+      </div>
+      <!-- section 2 -->
+      <div class="bg-[#111618] text-white" style="font-family: 'Space Grotesk', 'Noto Sans', sans-serif">
+         <div class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-30 z-10"></div>
+            <div class="relative w-[500px] h-[500px] flex items-center justify-center">
+               <img
+                  alt="Earth from space"
+                  class="w-full h-full object-cover rounded-full shadow-2xl shadow-cyan-500/20"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFp7u63bGXSaFjUYK1hR_demB6wKmzWDDflWPm7MuV97dCDbbNPvdyOsAnwwvxpUUnnrKcB_anszW7lyQEW2FDbkAXWjvyAdXZ15-ywkgQGKn7HPXU_RdQqVJgWAT82C0ItHL9OJmXNWZuTgtdvzqtmZWu1xfmoDYjnOpBNtt9vDIP6rb5EaAzOJN7SH9efw3BtmxgcIQi99cc80k18MBTzhHM7zqAqwYPBwWSWQAmUI2FXZ7-DsRkeBo8mghgBHsPXo-BNibYmYw"
+               />
+               <div class="absolute inset-0 flex items-center justify-center z-20">
+                  <div class="text-center p-8 bg-black bg-opacity-20 rounded-lg backdrop-blur-sm">
+                     <h2 class="text-2xl font-bold leading-tight tracking-tight">GGG HHH III JJJ KKK LLL</h2>
+                  </div>
+               </div>
+               <div class="keyword-card" id="keyword1">
+                  <h3 class="text-lg font-bold">Keyword 1</h3>
+                  <span class="material-symbols-outlined text-[var(--primary-color)]"> arrow_outward </span>
+               </div>
+               <div class="keyword-card" id="keyword2">
+                  <h3 class="text-lg font-bold">Keyword 2</h3>
+                  <span class="material-symbols-outlined text-[var(--primary-color)]"> arrow_outward </span>
+               </div>
+               <div class="keyword-card" id="keyword3">
+                  <h3 class="text-lg font-bold">Keyword 3</h3>
+                  <span class="material-symbols-outlined text-[var(--primary-color)]"> arrow_outward </span>
+               </div>
+               <div class="keyword-card" id="keyword4">
+                  <h3 class="text-lg font-bold">Keyword 4</h3>
+                  <span class="material-symbols-outlined text-[var(--primary-color)]"> arrow_outward </span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- section 3 -->
+      <div class="flex min-h-screen">
+         <div class="w-1/4 p-12 flex flex-col justify-center">
+            <h1 class="text-4xl font-bold leading-tight mb-4">MMM NNN OOO PPP QQQ RRR</h1>
+            <p class="text-xl text-[#9db0b9] leading-relaxed">SSS TTT UUU VVV WWW XXX YYY ZZZ</p>
+         </div>
+         <div class="w-3/4 p-12">
+            <div class="grid grid-cols-1 gap-8">
+               <div class="bg-[#1A2024] rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+                  <div class="flex">
+                     <div class="w-1/2">
+                        <img
+                           alt="Reduced Carbon Footprint"
+                           class="object-cover h-full w-full"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPHtWwWBXtLGA6Rf5xR8eLihmGdXQOludOAUhsXOcZ5-RvSX3JQkmHccsynZVnipkkKLDDhG1ofWdUSE9V9Kh_hBbCBX5FwzONeUYjqcQS93CdexEOMNtrZTsJSOXIr68kcR1VFB4ckIGVO6meYKC8fPFTc7ItqeStMdWOZQB2r88NZseyGD3it9Tdo-KKJ6YK3hdykKPmwJBkgB6Ob4H_3QWOTxB_6gG6S5DQ6iPnyIcikR92k3hOIEplIn3wXE5sK0PNvMKIps0"
+                        />
+                     </div>
+                     <div class="w-1/2 p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-2">111 222 333 444</h3>
+                        <p class="text-base text-[#9db0b9]">555 666 777 888 999</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bg-[#1A2024] rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+                  <div class="flex">
+                     <div class="w-1/2">
+                        <img
+                           alt="Sustainable Practices"
+                           class="object-cover h-full w-full"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQZKzGNEtAK0-3WKn3_7qiBuNVK6oS5qQ6VfewnW3TV_hHMwFMxdGCSQgBfmJhMSbHXhyU_Ua93mcdjeFIkB86wJrkbjsO-h5ArnocMWpbhhjbeijpSq0QeJfqOkYhQBaV9mobe_gt2sL3tPes7ln2XlKm98yqvZvEYEsr130nvhoUgN4tirwTjrjqZ3mlyL1fPRaiTbXnSfUIFBV0ge-3xv6FDw3RA4662HRbUo16XUpIst2T20mFhmIjfFE_ZDREB4-5ZcoNwlo"
+                        />
+                     </div>
+                     <div class="w-1/2 p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-2">111 222 333 444</h3>
+                        <p class="text-base text-[#9db0b9]">555 666 777 888 999</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bg-[#1A2024] rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+                  <div class="flex">
+                     <div class="w-1/2">
+                        <img
+                           alt="Conservation Support"
+                           class="object-cover h-full w-full"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaiRjkQTWqxAP4h5WpQq2qcnjkswwymO1GHtREm2Ia7OVFpF1YaZnl8D0Tf80uZyaXYh9kI7ZDrDUbHYRkcWKx5ZIHiAEBm6e4kYKoc6sm8xgGy13m0Hek_RSzmTba9LjQdbxgdUdaLbVYjpe-v2kCLeP7PdOYVfWrxdT6fswvqWWp2Rzz2o1ya8gX6xMo8ncL31GuMcnWIbttKYAENPAbbhLqHuyd2NuRXjSOiTJSmv1fPCkmQM71VcJ7GidoZ9UNDUCbcCdozl0"
+                        />
+                     </div>
+                     <div class="w-1/2 p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-2">111 222 333 444</h3>
+                        <p class="text-base text-[#9db0b9]">555 666 777 888 999</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- section 4, 5 -->
+      <div class="flex items-center justify-center min-h-screen">
+         <div class="text-center px-4">
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-tight animate-fade-in-up">THIS IS A HUGE IMPACT STATEMENT</h1>
+         </div>
+      </div>
+      <!-- section 5 -->
+      <div class="flex flex-col items-center justify-center min-h-screen p-4">
+         <div class="w-full max-w-5xl text-center">
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-tight animate-fade-in-down">THIS IS A HUGE <span class="text-[var(--primary-color)]">IMPACT</span> STATEMENT</h1>
+            <p class="mt-8 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto animate-fade-in-up">We are committed to creating a sustainable future by empowering individuals and organizations to track and reduce their environmental footprint. Join us in making a difference.</p>
+         </div>
+         <div class="absolute bottom-8 animate-bounce">
+            <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+         </div>
+      </div>
+      <!-- section 6 -->
+      <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden" style="font-family: 'Space Grotesk', 'Noto Sans', sans-serif">
+         <div class="flex h-full grow flex-col justify-center">
+            <div class="flex flex-col items-center justify-center min-h-screen py-20 px-4 md:px-10">
+               <div class="grid w-full max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
+                  <div class="flex flex-col gap-8 md:gap-12">
+                     <div class="flex flex-col w-full h-[470px] bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg">
+                        <div
+                           class="h-[70%] w-full bg-cover bg-center"
+                           style="
+                              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB20iWty73T1gPVFtS_dLMO9Nc39lKd-K-RHOCf5q5uDaNi1Ejvxop-cBAUgA3zqrHV0YORT1qHpx0BKmetmp8HDg1fDUhSYuiTQ8PpsxGhhLRzovJXBaoNyAT7Lul74AIWjzlVzzmq2NPm5GNUYcY8HXBSk5J2rfYdXyFx3qf5PizwQqnfr8pc7rkKr6s4ijQ8yWlQNxW3uRTI0a2PEG3rkzk7IxePmuymmciMnkxl1o36-6SQAZ5PGaQOijCqC2X0qhiMn8T3JAs');
+                           "
+                        ></div>
+                        <div class="h-[30%] p-6 flex flex-col justify-center">
+                           <h3 class="text-white text-2xl font-bold">Feature Title</h3>
+                           <p class="text-gray-400 text-xl mt-2">Feature Description</p>
+                        </div>
+                     </div>
+                     <div class="flex flex-col w-full h-[470px] bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg">
+                        <div
+                           class="h-[70%] w-full bg-cover bg-center"
+                           style="
+                              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRnNb4zUVbfrGFGIr7EWIeuNoy-7JwvtqbHGdptT00PtCC4-D6nG1MaJrXjOfxzYuNu8boRppdGnPUrhF3unaKxEJoU3VA-WxoqnDON_cCBeuJWMGxn2V8qz69Mn3_sPfX0Z6FH3SWbBnBVXfqzfBKlijs2JqlqeiuWpOI0VsP9L6T_YXIgp2u70XDjug7nXH3vNH0vnwnWGD3_ZAHzNE7E0c5nnXaUK4K-wZ-Sw5yBdjhd3w0vfHOmGmEVmgQYj-dE_deBXvqS3g');
+                           "
+                        ></div>
+                        <div class="h-[30%] p-6 flex flex-col justify-center">
+                           <h3 class="text-white text-2xl font-bold">Feature Title</h3>
+                           <p class="text-gray-400 text-xl mt-2">Feature Description</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="flex flex-col gap-8 md:gap-12 mt-0 md:mt-16">
+                     <div class="flex flex-col w-full h-[470px] bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg">
+                        <div
+                           class="h-[70%] w-full bg-cover bg-center"
+                           style="
+                              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoMm5QjZ7gF_EyR1veOacWH7xWilIs6Al4WfhjlzPfJyHqakgxPFibbxjDnKYTFs4RJv1zNJopEH2ghE9WY8GGZ4fG86VVvf_rWSKCsA2CL6ABz4YVhR0mQVha2ZgWCu1NJhu_D_2dbkJ2sQN6KKEAHgB8__IObVF4Xhkn2Oi-1mU8MG_pWiOP-K9WNs86a8MdrykSr6KJIzb-akpKYn5FwkZh0yXxMMycqQWEFV3qdSc7mOEJIW4655S8SrpaKGHPf2NCd-7wRkQ');
+                           "
+                        ></div>
+                        <div class="h-[30%] p-6 flex flex-col justify-center">
+                           <h3 class="text-white text-2xl font-bold">Feature Title</h3>
+                           <p class="text-gray-400 text-xl mt-2">Feature Description</p>
+                        </div>
+                     </div>
+                     <div class="flex flex-col w-full h-[470px] bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg">
+                        <div
+                           class="h-[70%] w-full bg-cover bg-center"
+                           style="
+                              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAj8yME8PjgO64fvmT0BHFD4jT9e-ciXEkXsVIRfEigdBCMZw-oW3eth9-R5NU3XddqVCG2L1_FN6hLOpqEDMJp1Y4UQOWmaRLVxbgeyL5vULsiDcO2c400Uw5wt253DWDv1hIHGgyH7ZHrd_Bo2ScMmftANkB2XlqW4pmYlka2iJ2aoJYy_zYnRdzb4wdxOuxksPKPjG4dNRcU8xGKxjC72Plo7BZgb_l0aQWKXooKH8Me_4WT0T74TFpts7alx1Kwfm089u7cgf4');
+                           "
+                        ></div>
+                        <div class="h-[30%] p-6 flex flex-col justify-center">
+                           <h3 class="text-white text-2xl font-bold">Feature Title</h3>
+                           <p class="text-gray-400 text-xl mt-2">Feature Description</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- section 7 -->
+      <div class="flex flex-col min-h-screen">
+         <div class="flex-1 flex flex-col items-center justify-center text-center px-4">
+            <p class="text-4xl md:text-5xl font-bold">Carbon emissions saved so far: 50,000 CO₂</p>
+            <p class="text-2xl mt-4">Same effect as planting 500 trees</p>
+            <p class="text-4xl md:text-5xl font-bold mt-10">Accumulated points: a total of 80,000P</p>
+         </div>
+         <div class="flex-1 flex flex-col items-center justify-center text-center px-4 bg-[#1A2023]">
+            <p class="text-base mb-4">Would you like to join us?</p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+               <button class="bg-green-500 text-white font-bold py-3 px-8 rounded-[20px] hover:bg-green-600 transition-colors">Join now</button>
+               <button class="bg-gray-700 text-white font-bold py-3 px-8 rounded-[20px] hover:bg-gray-600 transition-colors">Learn more</button>
+            </div>
+            <p class="text-base mt-8">Are you a member? <a class="text-green-400 underline" href="#">Going to log in</a></p>
+         </div>
+      </div>
+      <!-- section 8 -->
+      <div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden" style="font-family: 'Space Grotesk', 'Noto Sans', sans-serif">
+         <div class="flex flex-col items-center justify-center grow py-20">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div class="text-center mb-12">
+                  <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Trusted by Leading Companies</h2>
+                  <p class="mt-4 text-lg text-gray-400">We partner with innovative companies to drive a sustainable future.</p>
+               </div>
+               <div class="relative overflow-hidden group">
+                  <div class="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-[#111618] to-transparent z-10"></div>
+                  <div class="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-[#111618] to-transparent z-10"></div>
+                  <div class="flex animate-scroll group-hover:[animation-play-state:paused]">
+                     <div class="flex items-center space-x-16">
+                        <img
+                           alt="Company A Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy4jyuiz9O9bxQlwFGa9bncCkDMinUJjYTrtrsT3IiVt9lgx79raLniyLcJfNVIwGpl1sR1pn0_QX0zguS8460inuujPn8WHxRDjHzgZlp1EemhZeifS5wgE2QsuPfte1kfxi2djOxNuqfcJ72lia3po84qHQXIpkei8JRwb7beldyjgWQMo9HfKWLCBMEjrkMf-p4oOL2d_-vbbHqc8daGZushM9puiaM3VMckLe_TmoCsLw-GTAmF0w7K-CfnV09RBMuD5kEHrU"
+                        />
+                        <img
+                           alt="Company B Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-KjKJOOHiOImFliap6IZmRJyVknvMxjGddBqlu7WLMdNoRYjB-01bc6ekXTgDAOaa-n5lpLqTjhu-sSzMdkGJdgP15U2-BUaUC1bkFrnhDKoAzrGIdLUqBu9MD15mHwI7adrCeQudN74-87bHqueUPhnSUEMU2iEAQd8h1_eUCTmF_33xUuiqsMHW7uyxgCBQ0wve_UENQ96gZYK0LdZ8bwA6bZ0iiyUacFcvoLJl5EZmZNAbW7fn0zeexVcslRGeZWHIx9P1XQ0"
+                        />
+                        <img
+                           alt="Company C Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPTg5-Ra2k0FGsVSYY4KbF7kTQtTn3ENJhdi5kG2r--z_GDKTkHVC1qQ8dzp4jG9cOQU00W16cyh-D9QU2Ae66lQzQI9FNN4Mw1f_hNf4tmFUB6AEjDh-F3gIMnHpFR-0QL-zrkbv3rmOfdMx68zXu5394Q9ilAp3lbfGWGtUtSQWXepCxazs6K6JLw1FdBHmX4pollV6eNTjWD5v0CtSIxTaXgL3ilRW31VrQKyxwfC7tVhF5_1y5pM1QKB9R9gDkojGnp2pjTPA"
+                        />
+                        <img
+                           alt="Company D Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYdBZEJYhLi2GiHv27YYHlifwlmTleBNrUrbcEn2rTQwWuOaddCOnlMoXYQzLeNZfUtKnwHAykk_FSulaCUSoyVVHT8gugaOmYLkDX3mXRmfn_cA95r-KWIr8pcoDJSKlgUNZqA858RdC09S_wY2ajdWrSFahFELjWPTEsBSIMyRD6t2xpWXAj6_CIRsGf8KWXqxL7g0GPIy8xpSUfaVmvyRLt8M_3M5fRUaB8okXsSyKq1RYDfItL85EuKUOqya6PQinFVyJMBN8"
+                        />
+                        <img
+                           alt="Company E Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCboApAE_E9EDuEVVfRPpTZRN8l-8-xKBdSO4ek-ANmZAKXNLVB1OJSp3jMuzWAY7x3-MOlRYQQI52RKV_iha7O4xI5tow9BIAVjtZyC7l3nms_8gyQVj7Qlzjo6FK9ZtKLsbshTYIFHFEFfkBJ9C54yQZlYMIKprUDoiiHvfzXuo51cxHQD9YT93GTRfi-mn0BbdNfXt1OMnmsOjd-4lIohhgGauXQ9IDzcAR-hRZA0R2ZnEkALvXV-VbP1vmV8VLSczhbeqFG3gA"
+                        />
+                        <img
+                           alt="Company F Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiDujoaAv2sKhyb2UYK-BBzdJG_1sSVOx_gD_jLWgJlB14pe1OY2UOZClK04HqgBqXrM9uu5TaNE5kBqVSqmUZsFfhhsSahAUsWXiaCc5wm2pszbwT5d2q5mRTWQDYiYcbqwCrrUZz6cZY60Po2eSBEOefsB1jXpSseimbQNy7Fn01qG4G_FsgeXX4DOfT75LAzKhB1ngsPp9Rna42hM60fjKLTd2KdTB1sWydjr-sSM_a9TQcpIhyEovltuzqpJzZvUsRHrXQRPA"
+                        />
+                     </div>
+                     <div class="flex items-center space-x-16 ml-16">
+                        <img
+                           alt="Company A Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy4jyuiz9O9bxQlwFGa9bncCkDMinUJjYTrtrsT3IiVt9lgx79raLniyLcJfNVIwGpl1sR1pn0_QX0zguS8460inuujPn8WHxRDjHzgZlp1EemhZeifS5wgE2QsuPfte1kfxi2djOxNuqfcJ72lia3po84qHQXIpkei8JRwb7beldyjgWQMo9HfKWLCBMEjrkMf-p4oOL2d_-vbbHqc8daGZushM9puiaM3VMckLe_TmoCsLw-GTAmF0w7K-CfnV09RBMuD5kEHrU"
+                        />
+                        <img
+                           alt="Company B Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-KjKJOOHiOImFliap6IZmRJyVknvMxjGddBqlu7WLMdNoRYjB-01bc6ekXTgDAOaa-n5lpLqTjhu-sSzMdkGJdgP15U2-BUaUC1bkFrnhDKoAzrGIdLUqBu9MD15mHwI7adrCeQudN74-87bHqueUPhnSUEMU2iEAQd8h1_eUCTmF_33xUuiqsMHW7uyxgCBQ0wve_UENQ96gZYK0LdZ8bwA6bZ0iiyUacFcvoLJl5EZmZNAbW7fn0zeexVcslRGeZWHIx9P1XQ0"
+                        />
+                        <img
+                           alt="Company C Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPTg5-Ra2k0FGsVSYY4KbF7kTQtTn3ENJhdi5kG2r--z_GDKTkHVC1qQ8dzp4jG9cOQU00W16cyh-D9QU2Ae66lQzQI9FNN4Mw1f_hNf4tmFUB6AEjDh-F3gIMnHpFR-0QL-zrkbv3rmOfdMx68zXu5394Q9ilAp3lbfGWGtUtSQWXepCxazs6K6JLw1FdBHmX4pollV6eNTjWD5v0CtSIxTaXgL3ilRW31VrQKyxwfC7tVhF5_1y5pM1QKB9R9gDkojGnp2pjTPA"
+                        />
+                        <img
+                           alt="Company D Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYdBZEJYhLi2GiHv27YYHlifwlmTleBNrUrbcEn2rTQwWuOaddCOnlMoXYQzLeNZfUtKnwHAykk_FSulaCUSoyVVHT8gugaOmYLkDX3mXRmfn_cA95r-KWIr8pcoDJSKlgUNZqA858RdC09S_wY2ajdWrSFahFELjWPTEsBSIMyRD6t2xpWXAj6_CIRsGf8KWXqxL7g0GPIy8xpSUfaVmvyRLt8M_3M5fRUaB8okXsSyKq1RYDfItL85EuKUOqya6PQinFVyJMBN8"
+                        />
+                        <img
+                           alt="Company E Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCboApAE_E9EDuEVVfRPpTZRN8l-8-xKBdSO4ek-ANmZAKXNLVB1OJSp3jMuzWAY7x3-MOlRYQQI52RKV_iha7O4xI5tow9BIAVjtZyC7l3nms_8gyQVj7Qlzjo6FK9ZtKLsbshTYIFHFEFfkBJ9C54yQZlYMIKprUDoiiHvfzXuo51cxHQD9YT93GTRfi-mn0BbdNfXt1OMnmsOjd-4lIohhgGauXQ9IDzcAR-hRZA0R2ZnEkALvXV-VbP1vmV8VLSczhbeqFG3gA"
+                        />
+                        <img
+                           alt="Company F Logo"
+                           class="h-12 w-auto object-contain"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiDujoaAv2sKhyb2UYK-BBzdJG_1sSVOx_gD_jLWgJlB14pe1OY2UOZClK04HqgBqXrM9uu5TaNE5kBqVSqmUZsFfhhsSahAUsWXiaCc5wm2pszbwT5d2q5mRTWQDYiYcbqwCrrUZz6cZY60Po2eSBEOefsB1jXpSseimbQNy7Fn01qG4G_FsgeXX4DOfT75LAzKhB1ngsPp9Rna42hM60fjKLTd2KdTB1sWydjr-sSM_a9TQcpIhyEovltuzqpJzZvUsRHrXQRPA"
+                        />
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <style>
+         @keyframes fade-in-up {
+            0% {
+               opacity: 0;
+               transform: translateY(20px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateY(0);
+            }
+         }
+         .animate-fade-in-up {
+            animation: fade-in-up 1s ease-out forwards;
+         }
+      </style>
+   </body>
+</html>
