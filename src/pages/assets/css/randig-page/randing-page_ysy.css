@@ -27,9 +27,94 @@
 /* 6. eco-impact end */
 
 /*   7. impact-stats    */
+.impact-stats {
+   /* 섹션 자체 여백은 Bootstrap로도 충분하면 생략 가능 */
+   padding: 72px 0;
+}
+
+/* 성과 지표 영역 */
+.impact-metrics {
+   margin-bottom: 32px; /* CTA와의 간격 */
+}
+.impact-metrics h2 {
+   margin: 0; /* 기본 h2 여백 제거 */
+   line-height: 1.2; /* 타이틀 줄간격 살짝 촘촘하게 */
+   font-weight: 700;
+   font-size: 3rem;
+}
+.impact-metrics p {
+   margin: 6px 0 0; /* 위 h2와의 간격만 좁게 */
+   line-height: 1.25; /* 문장 줄간격도 살짝 타이트하게 */
+}
+/* 숫자 강조(임시) – 팀에서 토큰/컬러 확정되면 교체 */
+.impact-metrics span {
+   font-weight: 700;
+}
+
+/* 참여 유도 영역 */
+.impact-cta p {
+   margin: 0 0 8px;
+   line-height: 1.25;
+}
+.impact-cta h3 {
+   margin: 0 0 8px; /* 버튼 상단/하단 간격 */
+   font-size: 1rem; /* h3지만 시각적 크기는 소제목 정도로 */
+   font-weight: 600;
+}
+.impact-cta h3 a {
+   padding: 10px 50px;
+   font-size: 2rem;
+   border-radius: 100px;
+}
+.impact-cta a + a {
+   margin-left: 8px; /* 버튼/링크 사이 최소 간격 */
+}
+
+/* 모바일에서 세로 여백 조금 여유 */
+@media (max-width: 576px) {
+   .impact-stats {
+      padding: 56px 0;
+   }
+   .impact-metrics {
+      margin-bottom: 24px;
+   }
+}
 
 /* 7. impact-stats end */
 
 /*    8. partners    */
+/* 협력사 텍스트 영역 */
+.partners-heading {
+   padding: 20px;
+}
+
+.partners-heading p {
+   margin: 0; /* p태그 기본 여백 제거 */
+   line-height: 1.2; /* 줄간격 살짝 좁게 */
+   font-size: 1.2rem;
+}
+
+.partners-heading .partner-title {
+   font-weight: bold; /* 굵게 */
+   font-size: 1.7rem; /* 필요시 크기도 조절 */
+}
+/* 협력사 텍스트 영역 끝 */
+
+/* 협력사 슬라이드 영역 (Swiper 구조) */
+.swiper {
+   padding: 20px;
+}
+
+.partner-logo {
+   width: 140px;
+   height: 48px;
+}
+/* 스타일은 팀에서 채울 영역: 클래스만 참조용으로 남김
+.partners-slider__prev,
+.partners-slider__next {
+}
+.partners-slider__pagination {
+} */
+/* 협력사 슬라이드 영역 (Swiper 구조) 끝 */
 
 /* 8. partners end */
