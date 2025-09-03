@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <title>Fintech Carbon Reduction</title>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <link href="https://fonts.googleapis.com" rel="preconnect" />
+      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <style type="text/tailwindcss">
+         :root {
+            --page-bg: #f2f6eb;
+            --card-bg: #ffffff;
+            --primary-text: #333333;
+            --secondary-text: #9e9e9e;
+            --accent-yellow: #ffce55;
+            --accent-green: #568265;
+            --accent-orange: #fb6e52;
+         }
+         body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--page-bg);
+         }
+      </style>
+   </head>
+   <body class="bg-[var(--page-bg)] text-[var(--primary-text)]">
+      <div class="flex min-h-screen">
+         <aside class="w-64 bg-[var(--accent-yellow)] flex flex-col justify-between p-6">
+            <div>
+               <div class="flex items-center gap-3 mb-8">
+                  <img
+                     alt="User Avatar"
+                     class="size-10 rounded-full"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaEB8L5671yQ8oubZrmpTMXsqRxFN0IRPGqqlYWLqmT4aQQ2lzE6uJ5uUVnFb7QWJIeZ8nqn9qLENAnbEi8IxJVRxNYYwN-_NRX4WVv3h8pwe-_qfV-qDTvZxEKA_54Vgy9__6kkOsUJ4B0B9t19FWdjzAPhJtbyu1sGdm6qwYJVmH9C6jkal9tBxjEkhcdTYHotOiIOj-klZU_xFtrIG0RSS5VGxg05eEfCNBwCpSz68PrIx8ylv0K3bASfXMgxd7dI4QOJQ4DBQ"
+                  />
+                  <span class="font-bold text-lg text-[var(--primary-text)]">My Page</span>
+               </div>
+               <nav class="flex flex-col gap-2">
+                  <a class="flex items-center gap-3 p-3 rounded-lg text-[var(--primary-text)] hover:bg-[var(--accent-green)]/20" href="#">
+                     <span class="material-symbols-outlined">dry_cleaning</span>
+                     Clothing Recycling
+                  </a>
+                  <a class="flex items-center gap-3 p-3 rounded-lg bg-[var(--accent-green)] text-white font-semibold" href="#">
+                     <span class="material-symbols-outlined">directions_bus</span>
+                     Public Transport Use
+                  </a>
+               </nav>
+            </div>
+         </aside>
+         <main class="flex-1 p-8">
+            <div class="max-w-4xl mx-auto">
+               <div class="bg-[var(--card-bg)] rounded-2xl shadow-lg p-8">
+                  <div class="flex flex-col md:flex-row items-center gap-8">
+                     <div class="flex-shrink-0">
+                        <div class="flex gap-4">
+                           <img
+                              alt="Bus Icon"
+                              class="h-24 w-auto object-contain"
+                              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUwfrnTh0NI5u5yHfZoZLlF0FtL3HChZ3rWuZUEncJ3L2y5z_-G5mrYZYrmmq66GuuiNZD-AdiLxR_D9vBbW4tyyrqLmmSgyVBICQ9tTxgGRtTiiSqQTMXmvMWjEjj5QDKV3u6J4BjOyZEQYgMW-io9rSL6qjBnnIzBO8G2Q9Z4Jt69htnDfm973pQRzu71VVslOaeCbDMR7eOlBYrdOGRF4twc8JqkL5fGeUY_2Ta0mHxdw-3uyTy7msynp2FBFWVgqvYhVGowfo"
+                           />
+                           <img
+                              alt="Subway Icon"
+                              class="h-24 w-auto object-contain"
+                              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT57HZ2cR8mUAzaK03hFX_XrDciAH1DELCqBzmmUBSRCoo1jvAJVQQTYcxhCxCVko-56ho4RFPj5a3deEFlzxTRyFhEkzci97ihwycdw45W7vTCmE0gbrtpffR0Wy5qvv6jjm4Cvg_ANstpns_uVdKOSWsIS_sb46IV1T4toY-F1pZpa7KUlo4lrqmAUCUQgWU83vxg3mpcXj71jvw8XbQqcCqZSA5_byAYUSTNt8MDhOKORBpkfpAFsYAPTNEurB_KImCHV656ko"
+                           />
+                        </div>
+                     </div>
+                     <div class="flex-1">
+                        <h2 class="text-2xl font-bold mb-2">Use Public Transport, Earn Points</h2>
+                        <p class="text-[var(--secondary-text)]">Certify your departure and arrival points to earn points proportional to your travel distance.</p>
+                     </div>
+                  </div>
+                  <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
+                     <div class="space-y-4">
+                        <input class="w-full p-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[var(--accent-yellow)] focus:border-transparent transition" placeholder="Departure point" type="text" />
+                        <input class="w-full p-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[var(--accent-yellow)] focus:border-transparent transition" placeholder="Arrival point" type="text" />
+                     </div>
+                     <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="w-full text-center py-4 px-6 bg-[var(--accent-yellow)] text-[var(--primary-text)] font-bold rounded-xl shadow-md hover:bg-opacity-90 transition transform hover:-translate-y-1">Depart</button>
+                        <button class="w-full text-center py-4 px-6 bg-[var(--accent-orange)] text-white font-bold rounded-xl shadow-md hover:bg-opacity-90 transition transform hover:-translate-y-1">Arrive Certification</button>
+                     </div>
+                  </div>
+                  <div class="mt-8 bg-[var(--page-bg)] p-4 rounded-xl text-center">
+                     <p class="font-semibold">Distance Traveled 15 km → Current Earning: <span class="text-[var(--accent-green)]">150 Points</span> / Accumulated: <span class="text-[var(--accent-green)]">1500 Points</span></p>
+                  </div>
+               </div>
+               <div class="mt-8 bg-[var(--card-bg)] rounded-2xl shadow-lg p-8">
+                  <h3 class="text-xl font-bold mb-4">Recent Usage History</h3>
+                  <div class="overflow-x-auto">
+                     <table class="w-full text-left">
+                        <thead>
+                           <tr class="border-b-2 border-gray-100">
+                              <th class="p-4 font-semibold text-[var(--secondary-text)]">Date</th>
+                              <th class="p-4 font-semibold text-[var(--secondary-text)]">Distance Traveled</th>
+                              <th class="p-4 font-semibold text-[var(--secondary-text)]">Points Earned</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="border-b border-gray-100">
+                              <td class="p-4">2023-09-15</td>
+                              <td class="p-4">15 km</td>
+                              <td class="p-4 font-bold text-[var(--accent-green)]">+150 Points</td>
+                           </tr>
+                           <tr class="border-b border-gray-100">
+                              <td class="p-4">2023-09-14</td>
+                              <td class="p-4">12 km</td>
+                              <td class="p-4 font-bold text-[var(--accent-green)]">+120 Points</td>
+                           </tr>
+                           <tr>
+                              <td class="p-4">2023-09-13</td>
+                              <td class="p-4">18 km</td>
+                              <td class="p-4 font-bold text-[var(--accent-green)]">+180 Points</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>Stitch Design</title>
+      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+      <link href="https://fonts.googleapis.com" rel="preconnect" />
+      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <style type="text/tailwindcss">
+         :root {
+            --page-bg: rgb(242, 246, 235);
+            --main-title: rgb(146, 195, 164);
+            --aux-text: rgb(158, 158, 158);
+            --sidebar-bg: rgb(255, 206, 85);
+            --sidebar-selected-bg: rgb(86, 130, 101);
+            --text-dark: rgb(51, 51, 51);
+            --price-accent: rgb(251, 110, 82);
+            --quantity-btn-bg: rgb(219, 245, 142);
+            --purchase-btn-bg: rgb(255, 206, 85);
+         }
+      </style>
+   </head>
+   <body class="bg-[var(--page-bg)]" style="font-family: Manrope, 'Noto Sans', sans-serif">
+      <div class="flex min-h-screen">
+         <aside class="w-64 bg-[var(--sidebar-bg)] flex flex-col p-6">
+            <div class="flex items-center gap-4 mb-10">
+               <img
+                  alt="User Avatar"
+                  class="rounded-full size-12 border-2 border-white"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGEi3vJzbRfbPGmBWZiQYMRcacsmrdHc5cLIkSoT_TJkxnCDfovvL_sP4QE6msZlszERZ94TDVz6NLMetEIx3her7m0DJs4ici1B8JzLSiYFTpPmsL4fP4vK-UuzyE3LsQjX49M3IbYDGKv10gpAYHlTvtyul7j0vQcp630cOVLH6obyeQPr3MvqjJWr3sQK7T_M53xmonUjP_6IC9JSgK1tEVde2JfRPZhO4Pk4wSDpOqnj3ZkNisRskH6s-f4-niL-1XDgZfi-A"
+               />
+               <span class="text-[var(--text-dark)] font-bold">My Page</span>
+            </div>
+            <nav class="flex flex-col gap-4">
+               <a class="px-4 py-3 rounded-lg text-[var(--text-dark)] bg-[var(--sidebar-selected-bg)] text-white font-semibold" href="#">Point Shop</a>
+               <a class="px-4 py-3 rounded-lg text-[var(--text-dark)] hover:bg-white/50 font-semibold" href="#">Anabada Market</a>
+            </nav>
+         </aside>
+         <main class="flex-1 p-10">
+            <div class="grid grid-cols-2 gap-16">
+               <div class="flex flex-col items-center">
+                  <div class="relative w-full max-w-lg">
+                     <div class="bg-white rounded-2xl shadow-lg p-4">
+                        <img
+                           alt="Eco-Friendly Bamboo Toothbrush"
+                           class="w-full h-auto aspect-square object-cover rounded-xl"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBzG-CoQ60AVupQxWmD2LMrIvfS5tTu6lQbHi1K2Hd9YLBWgvZzljfHZ292XJ0ZLQN0C_6mu4XLWto58QnGhU3D25ZD3cI0LOPszD-hlqMhSE486ktG7ZhDjurDLTmPc8VTquhQfb53mDSCpSESzPK_EPz4wA4Zafa9RYArLGgOnsXiZMtZr_IHDGl68e7buEqSLa4fcQNiJUPRYdlKTqlTMK5dTuNPV-fHYmoB72ndSb90QPcT-q7EHYV-Px-GCtAg94MJMZVNE8"
+                        />
+                     </div>
+                     <button class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-12 bg-white/50 p-2 rounded-full text-gray-600 hover:bg-white transition-all">
+                        <span class="material-symbols-outlined"> chevron_left </span>
+                     </button>
+                     <button class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-12 bg-white/50 p-2 rounded-full text-gray-600 hover:bg-white transition-all">
+                        <span class="material-symbols-outlined"> chevron_right </span>
+                     </button>
+                  </div>
+                  <p class="text-[var(--aux-text)] text-sm mt-4">An eco-friendly choice for a brighter smile and a cleaner planet.</p>
+               </div>
+               <div class="flex flex-col">
+                  <h1 class="text-[var(--main-title)] text-4xl font-bold mb-4">Eco-Friendly Bamboo Toothbrush</h1>
+                  <p class="text-[var(--text-dark)] leading-relaxed mb-6">
+                     This eco-friendly bamboo toothbrush is a sustainable alternative to plastic toothbrushes. Made from biodegradable bamboo, it's gentle on your teeth and the planet. The bristles are made from nylon, ensuring effective cleaning while minimizing environmental impact.
+                  </p>
+                  <div class="border-t border-gray-300 my-6"></div>
+                  <div class="flex items-baseline gap-4 mb-8">
+                     <h2 class="text-[var(--text-dark)] text-2xl font-bold">Price:</h2>
+                     <p class="text-[var(--price-accent)] text-3xl font-bold">1000p</p>
+                  </div>
+                  <div class="border-t border-gray-300 my-6"></div>
+                  <div class="flex items-center gap-8">
+                     <div class="flex items-center gap-4">
+                        <h2 class="text-[var(--text-dark)] text-2xl font-bold">Quantity:</h2>
+                        <div class="flex items-center border border-gray-300 rounded-lg">
+                           <button class="px-4 py-2 text-2xl text-gray-600 bg-[var(--quantity-btn-bg)] rounded-l-lg hover:bg-opacity-80">-</button>
+                           <span class="px-6 py-2 text-xl font-semibold text-[var(--text-dark)]">1</span>
+                           <button class="px-4 py-2 text-2xl text-gray-600 bg-[var(--quantity-btn-bg)] rounded-r-lg hover:bg-opacity-80">+</button>
+                        </div>
+                     </div>
+                     <button class="flex-1 max-w-xs text-center text-white text-lg font-bold py-4 px-8 bg-[var(--purchase-btn-bg)] rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">Purchase Product</button>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+   </body>
+</html>

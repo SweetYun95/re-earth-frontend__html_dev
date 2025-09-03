@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+      <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <style type="text/tailwindcss">
+         :root {
+            --c-background: #f2f6eb;
+            --c-main-title: #92c3a4;
+            --c-auxiliary-text: #9e9e9e;
+            --c-sidebar-accent: #ffce55;
+            --c-sidebar-selected: #568265;
+            --c-heart-accent: #fb6e52;
+         }
+         .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+         }
+      </style>
+      <title>Stitch Design</title>
+      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+   </head>
+   <body class="bg-[var(--c-background)]" style="font-family: Manrope, 'Noto Sans', sans-serif">
+      <div class="flex min-h-screen">
+         <aside class="w-80 flex-shrink-0 bg-[var(--c-sidebar-accent)] p-6">
+            <div class="flex flex-col h-full">
+               <div class="flex items-center gap-4 mb-10">
+                  <img
+                     alt="User Avatar"
+                     class="size-12 rounded-full object-cover"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp_SQlnPjRFaFPbdvwm-AdxMlejhOofS0ffoWPa67xC6yRA7fhHph35MHLqdIYX9gTl6c---jm6bfkvFrQXcmtMd57t0wJ1y6QEaAEFuqOPXYxtaaITMSO0d7gn29vQ057bMmEnrKbWwydoKZ2gS3m4lNq8ZfoyI17Q5P1-DUhCmIMOqgjnCWNm-2zdxGMU-TVwH1IpVvBvDJDSWCYFVHy5qDBCrlw3tmoGgyw_wae0ZeZ3uIN_dp_JdAI1AG2sinkaoyAFgaVPqU"
+                  />
+                  <h1 class="text-lg font-bold text-gray-800">My Page</h1>
+               </div>
+               <nav class="flex flex-col gap-4">
+                  <a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[var(--c-sidebar-selected)] text-white" href="#">
+                     <span class="material-symbols-outlined">shopping_bag</span>
+                     <span class="text-base font-semibold">Point Shop</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-white/50" href="#">
+                     <span class="material-symbols-outlined">storefront</span>
+                     <span class="text-base font-semibold">Anabada Market</span>
+                  </a>
+               </nav>
+               <div class="mt-auto flex flex-col gap-4">
+                  <button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[var(--c-sidebar-selected)] text-white text-base font-bold shadow-md hover:bg-opacity-90 transition-all">
+                     <span class="truncate">Register Product</span>
+                  </button>
+                  <button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white text-gray-700 text-base font-bold shadow-md hover:bg-gray-50 transition-all">
+                     <span class="truncate">Edit Product</span>
+                  </button>
+               </div>
+            </div>
+         </aside>
+         <main class="flex-1 p-8">
+            <div class="grid grid-cols-1 @container gap-8">
+               <div class="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                     alt="Main product image"
+                     class="absolute inset-0 w-full h-full object-cover"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1gQals-5i4T-cvnjWWZISXF29rLT-JgZY5Z7oJ2O4uwD0bSGpAapBlSWTafHhpTogd3iFQXrBt1ZKiKjeERtsHaomaZA3CrPPnCOahCdN45Cx_-p7lVZnp1SA012cmn11uDSGY9upxFG_WMhvMBwjqWonaP-OTDx8aL76VkAYtm0sAAlUVYtYPr7b9vyOQ-nWTwpCoIlg7M_HJF7EzjjCuDDZVqoC1KlzOxNlu518CjTiQgGMA41ip1wnH9xMmQswRBZ7AyqYJjI"
+                  />
+                  <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+                     <div class="max-w-md bg-white/90 backdrop-blur-sm p-4 rounded-xl flex items-center gap-4">
+                        <div class="flex-1">
+                           <p class="text-lg font-bold text-gray-800">EcoLife</p>
+                           <p class="text-base text-[var(--c-auxiliary-text)]">Reusable Water Bottle</p>
+                           <p class="text-xl font-bold text-[var(--c-sidebar-selected)] mt-2">1,500 P</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <h2 class="text-3xl font-bold text-[var(--c-main-title)] tracking-tight">Point Shop</h2>
+               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all hover:shadow-xl hover:-translate-y-1">
+                     <div class="relative">
+                        <img
+                           alt="Bamboo Toothbrush"
+                           class="w-full h-48 object-cover"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcwT144SuP_Uo6l01HMZJ1mX9ragG9XJD9jAqFHlBOJy1juD-rPyOCOA5y_jitid0wZY9-IcJNh-rc1tCXTwauXCVaZxQ3vkvHjbvOAHS68KWvdkEdA0bWYiFrPJfnb5-RLriviMPB_7_AEsfMQAEr0y-cNivxqLaLclwIMAq3inqIuN66QNTHlMFYWrhl9TBYKXnmt4oyWAS7O5CxYTrA6bWIQfJXWJQV0bMky_Pns5mp_bUciIv7FvfEjqfumRB5zyW2bzbD6FI"
+                        />
+                        <button class="absolute top-3 right-3 text-gray-400 hover:text-[var(--c-heart-accent)] transition-colors">
+                           <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                     </div>
+                     <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate">Bamboo Toothbrush</h3>
+                        <p class="text-base text-[var(--c-auxiliary-text)] mt-1">Eco Friendly</p>
+                        <p class="text-lg font-bold text-[var(--c-sidebar-selected)] mt-2">300 P</p>
+                     </div>
+                  </div>
+                  <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all hover:shadow-xl hover:-translate-y-1">
+                     <div class="relative">
+                        <img
+                           alt="Organic Cotton Tote Bag"
+                           class="w-full h-48 object-cover"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCjb4UI5eJtKHd_dbGCEsf-oKJleDSb-NC4KQ2CmpWlHiWbcXPL0oniq4WAw4RU7qjhsGEyqUcjlTFZgErxW8zdhItY3yipj7s1iiBlSaLvglhjmhTxREqLdTHwvaedJLjtXu0hc_loP36L9ydbWFaT9gUTQRlDdoVerxLKS10rytIVNqNRBCcG4POM0njwvFDMw-4j5Ev5KfTETV4NOLdsZavyZiJTAPC-HSz8XT2J7eQad8J52zrIHxpOsLFUb63FZDabboxC2Q"
+                        />
+                        <button class="absolute top-3 right-3 text-[var(--c-heart-accent)]">
+                           <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                     </div>
+                     <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate">Organic Cotton Tote Bag</h3>
+                        <p class="text-base text-[var(--c-auxiliary-text)] mt-1">Sustainable Choice</p>
+                        <p class="text-lg font-bold text-[var(--c-sidebar-selected)] mt-2">800 P</p>
+                     </div>
+                  </div>
+                  <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all hover:shadow-xl hover:-translate-y-1">
+                     <div class="relative">
+                        <img
+                           alt="Solar-Powered Charger"
+                           class="w-full h-48 object-cover"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_6tTg4-e6fDTZGbYZUOXKFnRdzy1wxCUeq1wYLkN560rYbQOTG595mHJKp8WZDi0eCc5SC-7jj6QNkvMbut5-Q6LhSUcub8E0Ggk0Kk61d4Z0e_0038DnKBpo6XdNkdIwhX0tTQRGeLBb_SHSb2zqU_pun1H11ay6wMcnHf8idD4Pdu2VGQGW-CdX2cIT_2WymMx_DqE4D87aILZESh7fNAjUXY-nyhBN9nod8lZIpAQf2RZ_LGXP_FVEscZCf_z7CChyS1d94oU"
+                        />
+                        <button class="absolute top-3 right-3 text-gray-400 hover:text-[var(--c-heart-accent)] transition-colors">
+                           <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                     </div>
+                     <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate">Solar-Powered Charger</h3>
+                        <p class="text-base text-[var(--c-auxiliary-text)] mt-1">Green Energy</p>
+                        <p class="text-lg font-bold text-[var(--c-sidebar-selected)] mt-2">2,500 P</p>
+                     </div>
+                  </div>
+                  <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all hover:shadow-xl hover:-translate-y-1">
+                     <div class="relative">
+                        <img
+                           alt="Recycled Paper Notebook"
+                           class="w-full h-48 object-cover"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaVvw0dvMcB-zkZLP7snzC2AKPwzm9siu2cTOIfiXeZ4T8HXIRoe2j71evDGlDzeltrl7SFQ6KMqy6YUVUP77U89jIaVH8idot-LCkPefCeQHX-RUa1OvragV_UAtu4ONd5k80BI0S-L4-chQv4IS4UnNZGpsQsPNDZwBxk23dLPCYF1znGUxdKS7Aw2aDzSVKP-h8DSoC4SniJGUq1me0wJvcbZK2tuqFTY6TdRi-4sHRmXyW9xp3e6hum_rSmsXpWgpl4yWiv4Q"
+                        />
+                        <button class="absolute top-3 right-3 text-gray-400 hover:text-[var(--c-heart-accent)] transition-colors">
+                           <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                     </div>
+                     <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate">Recycled Paper Notebook</h3>
+                        <p class="text-base text-[var(--c-auxiliary-text)] mt-1">Write Sustainably</p>
+                        <p class="text-lg font-bold text-[var(--c-sidebar-selected)] mt-2">450 P</p>
+                     </div>
+                  </div>
+                  <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all hover:shadow-xl hover:-translate-y-1">
+                     <div class="relative">
+                        <img
+                           alt="Eco-Friendly Cleaning Kit"
+                           class="w-full h-48 object-cover"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuD58E2E6oXHPcv-UsC0KEKELDfqJ342OGemw_p5zMvl5X8eNP38296xbpz8QJeTuoRE5gWuFvNLl-5WhljDspw48yvFcf45P1MXfREKo7BvdY2rABsXjmlcwFS6x6Ln9oAdCNVBtcQOEx2wS23eUuXmJKQ71Pxk_pXjGC_3y5ZivkrILMngxOw695jRBkbFycFB1_E983YqPT9r7VzRFSoYfkw4TbLHp3e45e9Nu1RuUWOVmDhqUnlmTj6hok536LRjiOIVQSaZzSw"
+                        />
+                        <button class="absolute top-3 right-3 text-gray-400 hover:text-[var(--c-heart-accent)] transition-colors">
+                           <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                     </div>
+                     <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate">Eco-Friendly Cleaning Kit</h3>
+                        <p class="text-base text-[var(--c-auxiliary-text)] mt-1">Clean &amp; Green</p>
+                        <p class="text-lg font-bold text-[var(--c-sidebar-selected)] mt-2">1,200 P</p>
+                     </div>
+                  </div>
+                  <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all hover:shadow-xl hover:-translate-y-1">
+                     <div class="relative">
+                        <img
+                           alt="Reusable Food Wraps"
+                           class="w-full h-48 object-cover"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF7-UD0PHcCp0-c6omUhkASsju47ZX6Ltq0eyUrCgvQEzrQC-ME9ypGUEZUqVcnIwfg69niHqd9vDfDtYx9S3dUYwuubCxLnNHALgH5l7wQ3CbeIanF1366INyzK3XxK8dTMqQvXe4IoRdVmvsXlYPFLsu3_AjvCdm3fi1D8r38O7iAfYWasOW4RJhlr-C1M65SSDgdjq_vFsLqPc9UmK8_F-S_Ch6ETv2K1X_Lb6r1UPcHPnHJRUYyPGspDEi6ngjul3xksi7ORY"
+                        />
+                        <button class="absolute top-3 right-3 text-gray-400 hover:text-[var(--c-heart-accent)] transition-colors">
+                           <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                     </div>
+                     <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate">Reusable Food Wraps</h3>
+                        <p class="text-base text-[var(--c-auxiliary-text)] mt-1">Zero Waste Kitchen</p>
+                        <p class="text-lg font-bold text-[var(--c-sidebar-selected)] mt-2">600 P</p>
+                     </div>
+                  </div>
+                  <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all hover:shadow-xl hover:-translate-y-1">
+                     <div class="relative">
+                        <img
+                           alt="Plantable Seed Paper"
+                           class="w-full h-48 object-cover"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNz-Le5HjdwN4VKkHEaC5QdaEYEJhtsoW7u3JQYdo4ZLIntLR5PN54W3R5yoHu2fAnenNPRt-N6DkGCQnNyaQhtoU2G4mbl1ElIuuPzNkFJmMBStgoTW4s_Xh-FPZvB68nEb1_uOZIUv_2tgJarSMoJ47003NkuCcCK1LT1J7_UDdtXOT8rY8YRCKTVVRLGSzJbErsFpA1IJ9vUcMKeKE_D46e0bpoo1-HhWKdH3fkWbOawtSTsgtTE3Bde7UMqr3PISNOQvP7w94"
+                        />
+                        <button class="absolute top-3 right-3 text-[var(--c-heart-accent)]">
+                           <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                     </div>
+                     <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate">Plantable Seed Paper</h3>
+                        <p class="text-base text-[var(--c-auxiliary-text)] mt-1">Watch It Grow</p>
+                        <p class="text-lg font-bold text-[var(--c-sidebar-selected)] mt-2">250 P</p>
+                     </div>
+                  </div>
+                  <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all hover:shadow-xl hover:-translate-y-1">
+                     <div class="relative">
+                        <img
+                           alt="Upcycled Denim Backpack"
+                           class="w-full h-48 object-cover"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMRr8xXYi_FAqdRrlXcu5y9qLzZPT3W9LbbKAMJ94GudFZtOpBUitoaTDkvsTykj1mEAkSLNcwXAqKW4SSxzvG7lnAYg9qW84OHqBGQ-rrWmNfpjW1Hrj8HIRzaeju_vsg-nd57VSGGd7PT51np_D9LhGoMN9M39guPk3J8evSX7tCY5-FYk6-MTL_x4pkK95IiuyEi4fjsyZ-045C7NCjRWnnTk__9K8B4PBfZveEyC4qgorFoQTr-ckZ92xAdZ7hA4YHHRpewWQ"
+                        />
+                        <button class="absolute top-3 right-3 text-gray-400 hover:text-[var(--c-heart-accent)] transition-colors">
+                           <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                     </div>
+                     <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate">Upcycled Denim Backpack</h3>
+                        <p class="text-base text-[var(--c-auxiliary-text)] mt-1">Stylish &amp; Sustainable</p>
+                        <p class="text-lg font-bold text-[var(--c-sidebar-selected)] mt-2">3,200 P</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+      <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <title>Stitch Design</title>
+      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+   </head>
+   <body class="bg-[#F2F6EB]">
+      <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style="font-family: Manrope, 'Noto Sans', sans-serif">
+         <div class="layout-container flex h-full grow flex-col">
+            <div class="flex flex-1">
+               <aside class="w-64 bg-[#FFCE55] p-6 flex flex-col gap-y-6">
+                  <div class="flex justify-center mb-4">
+                     <button class="flex items-center justify-center h-12 w-12 rounded-full bg-white text-[#333333]">
+                        <span class="material-symbols-outlined text-3xl"> person </span>
+                     </button>
+                  </div>
+                  <nav class="flex flex-col gap-y-4">
+                     <a class="flex items-center justify-center rounded-lg bg-[#568265] py-3 px-4 text-white font-semibold" href="#"> Clothing Recycling </a>
+                     <a class="flex items-center justify-center rounded-lg py-3 px-4 text-[#333333] font-semibold" href="#"> Public Transport Use </a>
+                  </nav>
+               </aside>
+               <main class="flex-1 p-10 bg-[#F2F6EB]">
+                  <div class="w-full max-w-4xl mx-auto">
+                     <div class="bg-white rounded-lg shadow-md p-8 text-center">
+                        <div class="flex justify-center mb-6">
+                           <img
+                              alt="Clothing Collection Bin"
+                              class="h-48 w-48 object-contain"
+                              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgIZmrgCv54V4xzV40BnPd0CVxdo3sZrVCwJUD43KcmJzXRJK2Z3o1mkue5VuDjVE5YpgGd8NPMY-t1dw3OOpZIkEJNaIzWaX1pxnBmHnRoypwC60dUEftZeCLmr-rPgcPfCvAQbUZdA02sZBEvR6kVgm0BJbTrv1t3IlzknyJEhqp3t3TcFM8jDoWYNUbCoO9T3gU12hDH-FgzL6KjXJrmEcm_JqMKYpA5jaJg-BLGZ4Pi8I1qRMyuXPmO5l7WgwcadwUDvTGeeQ"
+                           />
+                        </div>
+                        <p class="text-[#9E9E9E] text-base leading-normal mb-6">Earn points by certifying when you put old clothes into the collection bin.</p>
+                        <button class="w-full max-w-xs mx-auto bg-[#FB6E52] text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition-colors">Certify</button>
+                        <p class="text-[#333333] text-lg font-semibold leading-normal mt-6">Current Earning: <span class="text-[#92C3A4]">N</span> Points / Accumulated: <span class="text-[#92C3A4]">M</span> Points</p>
+                     </div>
+                     <div class="mt-12">
+                        <h2 class="text-[#333333] text-2xl font-bold mb-6">Recent Usage History</h2>
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                           <table class="w-full">
+                              <thead class="bg-gray-50">
+                                 <tr>
+                                    <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                    <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount Collected</th>
+                                    <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Points Earned</th>
+                                 </tr>
+                              </thead>
+                              <tbody class="divide-y divide-gray-200">
+                                 <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">2023-11-15</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">5 kg</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">50</td>
+                                 </tr>
+                                 <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">2023-11-08</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">3 kg</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">30</td>
+                                 </tr>
+                                 <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">2023-11-01</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">4 kg</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">40</td>
+                                 </tr>
+                                 <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">2023-10-25</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">2 kg</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">20</td>
+                                 </tr>
+                                 <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">2023-10-18</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">1 kg</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-[#9E9E9E]">10</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </main>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
