@@ -18,13 +18,178 @@
 
 /* 4. product-cards end */
 
-/*    5. showcase    */
+/*    5. 랜딩페이지     */
+.showcase {
+   text-align: center;
+   padding: 200px 40px;
+   background: #f9f9f9;
+}
+.highlight-text {
+   font-size: 2rem;
+   font-weight: 800;
+   color: #000;
+   text-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
 
-/* 5. showcase end */
+/* 6. 랜딩페이지  */
 
-/*   6. eco-impact    */
+.service-container {
+   display: flex;
+   justify-content: center;
+   gap: 200px;
+   flex-wrap: wrap;
+   padding: 200px 40px;
+}
 
-/* 6. eco-impact end */
+.service-left {
+   display: flex;
+   flex-direction: column;
+}
+
+.service-left h2 {
+   font-size: 24px;
+}
+
+.service-card {
+   width: 280px;
+   background: #fff;
+   border-radius: 20px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   text-align: left;
+}
+
+.card-media {
+   height: 160px;
+   background: #e0e0e0;
+   border-radius: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #888;
+   font-size: 14px;
+}
+.card-content {
+   background: #f0f0f0;
+   border-radius: 14px;
+   padding: 14px 16px;
+}
+.card-content h3 {
+   margin: 0 0 8px;
+   font-size: 18px;
+   font-weight: 700;
+   color: #222;
+}
+.card-content p {
+   margin: 0;
+   color: #333;
+   line-height: 1.6;
+}
+
+.service-card:hover {
+   width: 300px;
+}
+.cards-nav {
+   display: none;
+}
+/* ========= 모바일 전용 ========= */
+@media (max-width: 768px) {
+   .cards-section {
+      position: relative;
+   }
+
+   .cards-wrapper {
+      position: relative;
+      /* 버튼을 카드 영역 위에 겹치기 위해 기준 컨테이너 */
+      padding: 0 12px; /* 좌우 버튼 여백 조금 */
+   }
+
+   .cards-track {
+      display: flex;
+      gap: 12px; /* 카드 간격 */
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      padding: 8px 4px 16px; /* 손가락 스와이프 여유 */
+   }
+
+   .cards-track::-webkit-scrollbar {
+      display: none;
+   }
+   .cards-track {
+      scrollbar-width: none;
+   }
+
+   .card {
+      flex: 0 0 auto; /* 줄바꿈 막고 가로로 나열 */
+      min-width: 85%; /* 한 화면에 카드 1장 위주, 살짝 옆이 보이게 */
+      scroll-snap-align: start; /* 카드 단위로 딱딱 멈춤 */
+      /* 기존 카드 스타일(색/그림자/패딩)은 그대로 두세요 */
+   }
+
+   /* 좌우 네비 버튼 */
+   .cards-nav {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 5;
+      backdrop-filter: blur(2px);
+   }
+   .cards-nav.prev {
+      left: 4px;
+   }
+   .cards-nav.next {
+      right: 4px;
+   }
+   .cards-nav:disabled {
+      opacity: 0.35;
+      cursor: default;
+   }
+
+   /* 좌우 페이드(선택사항: 가장자리 시야 유도) */
+   .cards-wrapper::before,
+   .cards-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 28px;
+      pointer-events: none;
+      z-index: 4;
+   }
+   .cards-wrapper::before {
+      left: 0;
+      background: linear-gradient(to right, var(--page-bg, #fff) 30%, transparent);
+   }
+   .cards-wrapper::after {
+      right: 0;
+      background: linear-gradient(to left, var(--page-bg, #fff) 30%, transparent);
+   }
+}
+
+/* ========= 태블릿(옵션) ========= */
+@media (min-width: 769px) and (max-width: 1024px) {
+   .cards-track {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+   }
+   .card {
+      min-width: auto;
+   }
+}
 
 /*   7. impact-stats    */
 

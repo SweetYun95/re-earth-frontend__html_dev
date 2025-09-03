@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <title>Speech AI Dashboard</title>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <link href="https://fonts.googleapis.com" rel="preconnect" />
+      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <style type="text/tailwindcss">
+         :root {
+            --primary-color: #38e07b;
+            --secondary-color: #e6ffe6;
+            --background-color: #f0fdf4;
+            --text-primary: #1f2937;
+            --text-secondary: #4b5563;
+            --accent-color: #10b981;
+            --card-background: #ffffff;
+            --border-color: #d1fae5;
+         }
+         body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+         }
+         .card {
+            background-color: var(--card-background);
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+         }
+         .button-primary {
+            background-color: var(--primary-color);
+            color: var(--text-primary);
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s;
+         }
+         .button-primary:hover {
+            background-color: var(--accent-color);
+         }
+         .button-secondary {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s, color 0.2s;
+         }
+         .button-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+         }
+      </style>
+   </head>
+   <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+      <div class="flex flex-col min-h-screen">
+         <header class="bg-[var(--card-background)] shadow-sm sticky top-0 z-10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+               <div class="flex items-center justify-between h-16">
+                  <div class="flex items-center gap-4">
+                     <div class="text-[var(--primary-color)]">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+                              fill="currentColor"
+                           ></path>
+                        </svg>
+                     </div>
+                     <h1 class="text-2xl font-bold text-[var(--text-primary)]">Speech AI</h1>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex-grow">
+            <div class="flex flex-col lg:flex-row gap-8 py-8">
+               <aside class="lg:w-1/4 space-y-8">
+                  <div class="card">
+                     <h2 class="text-2xl font-bold text-[var(--text-primary)] mb-4">My Information</h2>
+                     <div class="flex flex-col items-center">
+                        <img
+                           alt="User Avatar"
+                           class="h-24 w-24 rounded-full object-cover mb-4"
+                           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuMuO_aLzP3OBDgwf1A8ZCuTb4p6pIbVjJBCbNdv2zdq1tCuJhyNN8OJOFdIuk-a1nGwuHFXv09AiMIX3HT1z9xwJVg07yj2sogJPhQk8AOsCWhPlVYIKwg4QYyM1OhyhjMysuFJfzuUKZyqSFJ7L7_x34t1urChSHdIGUO69z1OKAks6EjHkGZFZrhsadDUiJO4Eak3jZ4_xioVcHJl94H9OYOdf0UuyytinUEN8dyVcyzQljexxpTjQo6w0HgM74VBD7apIGorig"
+                        />
+                        <h3 class="text-xl font-bold text-[var(--text-primary)]">Sarah</h3>
+                        <p class="text-[var(--text-secondary)] text-sm">sarah@example.com</p>
+                        <div class="flex items-center gap-2 rounded-full bg-[var(--secondary-color)] px-4 py-2 text-sm font-semibold text-[var(--text-primary)] mt-4">
+                           <span class="material-symbols-outlined text-[var(--primary-color)] text-xl">star</span>
+                           <span>1,234 Points</span>
+                        </div>
+                     </div>
+                     <div class="mt-6 space-y-2">
+                        <div class="flex justify-between">
+                           <p class="text-[var(--text-secondary)]">Level</p>
+                           <p class="font-semibold text-[var(--text-primary)]">Pro</p>
+                        </div>
+                        <div class="flex justify-between">
+                           <p class="text-[var(--text-secondary)]">Member since</p>
+                           <p class="font-semibold text-[var(--text-primary)]">Jan 2023</p>
+                        </div>
+                     </div>
+                     <div class="mt-6">
+                        <h4 class="text-lg font-semibold text-[var(--text-primary)] mb-2">Mission Progress</h4>
+                        <div class="flex justify-between mb-1">
+                           <span class="text-base font-medium text-[var(--text-primary)]">Overall</span>
+                           <span class="text-sm font-medium text-[var(--text-primary)]">60%</span>
+                        </div>
+                        <div class="w-full bg-[var(--secondary-color)] rounded-full h-2.5">
+                           <div class="bg-[var(--primary-color)] h-2.5 rounded-full" style="width: 60%"></div>
+                        </div>
+                     </div>
+                     <button class="button-secondary w-full mt-6">Edit Profile</button>
+                  </div>
+               </aside>
+               <main class="lg:w-3/4">
+                  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                     <div class="lg:col-span-2 space-y-8">
+                        <div>
+                           <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-4">Services</h3>
+                           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                              <div class="card flex flex-col justify-between hover:shadow-lg transition-shadow duration-200">
+                                 <div>
+                                    <h4 class="text-lg font-bold text-[var(--text-primary)]">Public transport certification</h4>
+                                    <p class="text-[var(--text-secondary)] text-sm mt-1">Get certified for public transport use.</p>
+                                 </div>
+                                 <div class="mt-4 rounded-lg overflow-hidden aspect-video">
+                                    <img
+                                       alt="Public Transport"
+                                       class="w-full h-full object-cover"
+                                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiBz3KbK0rhy1xeR82tvXyFrSHndh1z5bogq_yziobJ8IkgVNcmxbWX9jCY-0ly_I8PuNzHmQh2mwkH5xK53BGwxZg_I7poNNo3T1Gmsx-yhFQU_BhwRikc9XhEOwBldp1soI6AcAT6ATFHDwRbue78Lf3wxFKERFI84QuxSXG4pDiUkBpsusLlir_fi4WDwq1YPYZoJrNeEeuSrOptACqFTSnDD-d-aN0ZaS9uALMhSicK8vNJTfcDslI9oKy7eC5DtUdaxB_PhS4"
+                                    />
+                                 </div>
+                              </div>
+                              <div class="card flex flex-col justify-between hover:shadow-lg transition-shadow duration-200">
+                                 <div>
+                                    <h4 class="text-lg font-bold text-[var(--text-primary)]">Vending machine certification</h4>
+                                    <p class="text-[var(--text-secondary)] text-sm mt-1">Get certified for vending machine use.</p>
+                                 </div>
+                                 <div class="mt-4 rounded-lg overflow-hidden aspect-video">
+                                    <img
+                                       alt="Vending Machine"
+                                       class="w-full h-full object-cover"
+                                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVrGBipGyKAv4Ch1poqZLUeNzB8yt9mitnNAi5x4-Ln755fWD048jOvG7sAKLUdcG8msBoP2TgHYidtKMEk8zk-QKvVJcezXeGYkZBOR-lflSY2zmMeMLkDnfroS51BhlnKNVYt2xhVz-RDMe6GnAXkYMjeJdNIcYfqV7kTM0Ip-ZXjVG2RdRjbFbKnr1fykGChxQsuBDQUZ10VQL_xjGRVOyCfmEKtvr5AFYbBS-ZmvsSchLCac3jsLm6A6FQJifSyA4l_b3REmNF"
+                                    />
+                                 </div>
+                              </div>
+                              <div class="card flex flex-col justify-between hover:shadow-lg transition-shadow duration-200">
+                                 <div>
+                                    <h4 class="text-lg font-bold text-[var(--text-primary)]">Accreditation of clothes &amp; family</h4>
+                                    <p class="text-[var(--text-secondary)] text-sm mt-1">Get certified for current clothes and family.</p>
+                                 </div>
+                                 <div class="mt-4 rounded-lg overflow-hidden aspect-video">
+                                    <img
+                                       alt="Clothes and Family"
+                                       class="w-full h-full object-cover"
+                                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEJIwFKXIXw48STSWJbEs-ycy_TjZ4B_IWVNEf7FH7dFdmkO3kU3vRhobAM12jPFayns4OV9-RgOR3bu45zTwOkNZYJfLsI-R_TUaD19ybxrOMRXaICYW4E1aeEVbphirp8HGNdDxaJKMO4G4S5t_4WdK_cP_50bxNTTE0iOVKeV0G9us9o6mH84u02xV3tAThVO4bLnl9di1Bo2b2nyeEWKPypPF397D4iFML1ChFBpEbNSyQZJHqBSFQ6NkM6Le8hFYYFMemuJCk"
+                                    />
+                                 </div>
+                              </div>
+                              <div class="card flex flex-col justify-between hover:shadow-lg transition-shadow duration-200">
+                                 <div>
+                                    <h4 class="text-lg font-bold text-[var(--text-primary)]">Point Shop</h4>
+                                    <p class="text-[var(--text-secondary)] text-sm mt-1">Redeem your points for rewards.</p>
+                                 </div>
+                                 <div class="mt-4 rounded-lg overflow-hidden aspect-video">
+                                    <img
+                                       alt="Point Shop"
+                                       class="w-full h-full object-cover"
+                                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqfJjaRP_8XNLNUtz2JzJK526p6V3aM4wzHMZl1QSYq_NigZ789rnEZ2DIJ38PtbUIg9pbcvW0q3iuCj7WzvbAL_dt1lB19g4yUsdOAbhyjtKUrdv5kPg4fK-gJc50dSqrqXeUrMYh2H4YEX40el-JQmt6x6A24zBR7mRrZagzqFwwMayttgTp96uJHRxsrcUK4WAVA4zxMMaRrtS4i8iR67wDl3_gVH46WaExlmhS82EUM8qWaBRMI3sa6AafGo1bXjbpzp50YNzX"
+                                    />
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card">
+                           <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-4">Water Boom Donation Highlights</h3>
+                           <div>
+                              <div class="flex justify-between mb-1">
+                                 <span class="text-base font-medium text-[var(--text-primary)]">Donation Progress</span>
+                                 <span class="text-sm font-medium text-[var(--text-primary)]">75%</span>
+                              </div>
+                              <div class="w-full bg-[var(--secondary-color)] rounded-full h-4 overflow-hidden">
+                                 <div class="bg-[var(--primary-color)] h-full rounded-full transition-all duration-500 ease-out" style="width: 75%"></div>
+                              </div>
+                           </div>
+                           <div class="mt-4 space-y-2">
+                              <div class="flex justify-between">
+                                 <p class="text-[var(--text-secondary)]">Target</p>
+                                 <p class="font-semibold text-[var(--text-primary)]">$10,000</p>
+                              </div>
+                              <div class="flex justify-between">
+                                 <p class="text-[var(--text-secondary)]">Current Achievement</p>
+                                 <p class="font-semibold text-[var(--text-primary)]">$7,500</p>
+                              </div>
+                           </div>
+                           <div class="mt-6 flex flex-col sm:flex-row gap-4">
+                              <button class="button-primary flex-1">Booking a Collection</button>
+                              <button class="button-secondary flex-1">View Transparent Reports</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="space-y-8">
+                        <div class="card">
+                           <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-4">Today's Mission!</h3>
+                           <div class="space-y-4">
+                              <label class="flex items-center space-x-3 cursor-pointer">
+                                 <input checked="" class="h-5 w-5 rounded border-2 border-[var(--border-color)] text-[var(--primary-color)] focus:ring-offset-0 focus:ring-2 focus:ring-[var(--primary-color)]" type="checkbox" />
+                                 <span class="text-[var(--text-primary)]">Complete 3 public transport certifications</span>
+                              </label>
+                              <label class="flex items-center space-x-3 cursor-pointer">
+                                 <input class="h-5 w-5 rounded border-2 border-[var(--border-color)] text-[var(--primary-color)] focus:ring-offset-0 focus:ring-2 focus:ring-[var(--primary-color)]" type="checkbox" />
+                                 <span class="text-[var(--text-primary)]">Complete 2 vending machine certifications</span>
+                              </label>
+                              <label class="flex items-center space-x-3 cursor-pointer">
+                                 <input class="h-5 w-5 rounded border-2 border-[var(--border-color)] text-[var(--primary-color)] focus:ring-offset-0 focus:ring-2 focus:ring-[var(--primary-color)]" type="checkbox" />
+                                 <span class="text-[var(--text-primary)]">Complete 1 family certification</span>
+                              </label>
+                           </div>
+                           <button class="button-primary w-full mt-6">Immediate Action</button>
+                        </div>
+                        <div class="card">
+                           <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-4">Community Feed</h3>
+                           <div class="space-y-4">
+                              <div class="flex items-center gap-4">
+                                 <img
+                                    alt="Liam's avatar"
+                                    class="h-12 w-12 rounded-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiuismkDziR9k6Cyx2AhKQCc-eghyb6AguHDcEs7o4Zj18MkLo60apl-hQ4Tean_GDn-RmTYxheG-88jMNaOJeWi8WxGHzdrm5VpGPfLYKwXL3k0YhFkiJgk5KrxIAwPw37VQfhwQ9jYUS69R4wepu3sBqq9NkfAhz64MnX2uRHGbFzp5CQiGK8LRaBmOBi7wj5WFlA5F3gDRIfZ4NP1CSezir4nQq7qBV-UfmNgmAbw4fHXTcjEepDSvPrmf3BNN1i6tT5YEqYFWH"
+                                 />
+                                 <div>
+                                    <p class="font-semibold text-[var(--text-primary)]">Liam</p>
+                                    <p class="text-sm text-[var(--text-secondary)]">Completed 2 public transport certifications</p>
+                                 </div>
+                              </div>
+                              <div class="flex items-center gap-4">
+                                 <img
+                                    alt="Olivia's avatar"
+                                    class="h-12 w-12 rounded-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9jF1HFSMBWe468ZhPu9kNckssOElpsFfSvOevSsiBSe8gNaqkuPqJZrJ0UdodJR9-dhoFQ-ccY46yqNSGy_V_rze-1N4mzYTsW0EfN9i74nxYZgGt3b4jQCIsdVMguWaHksfG6uoffjEWE79cwSoxfw0J3luPNjsViPtfG8UPyeIW0R4IkEGypidcE7aNOEDuKc_PcvLgo6z7ZRS6HmWM0l6jgYosg_uAqRcYeAQUSzP0qb58kNJ0lEeeWWrTjtuCVav2gqYozOJw"
+                                 />
+                                 <div>
+                                    <p class="font-semibold text-[var(--text-primary)]">Olivia</p>
+                                    <p class="text-sm text-[var(--text-secondary)]">Completed 1 vending machine certification</p>
+                                 </div>
+                              </div>
+                              <div class="flex items-center gap-4">
+                                 <img
+                                    alt="Noah's avatar"
+                                    class="h-12 w-12 rounded-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCffdCKeNSwf1qd2J8_XJsMo4MNosIipCs0wYo-04jyH1tH6SB6kAuF33zkgDfUoTxzm0_ue6zHFhsp3pGhogr0QUIVjZdkGQE4W_7faL9qtsHt_1bt6Ub2CvYx2KUfaAO_-Wlp7gzFrdl80xALMUhfkdY248Vh5_TAlG5cmZTlULiGZ-ILj9TlKguNnE_kKa7GHE3pmKgp6EwQfC8d35GDNhh7x5tI05PwUaSDgNp3ohQP5CbE5SzGsyOs_0f9ZwugUAy1vJNB-9i4"
+                                 />
+                                 <div>
+                                    <p class="font-semibold text-[var(--text-primary)]">Noah</p>
+                                    <p class="text-sm text-[var(--text-secondary)]">Completed 3 family certifications</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </main>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
