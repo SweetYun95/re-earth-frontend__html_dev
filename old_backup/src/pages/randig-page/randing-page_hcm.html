@@ -6,6 +6,7 @@
       <title>Landing</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
       <link rel="stylesheet" href="../assets/css/randig-page/randig-page.css" />
+      <link rel="stylesheet" href="../assets/css/randig-page/randing-page_hcm.css" />
    </head>
    <body>
       <!-- aside: 빠른 이동 내비게이션 -->
@@ -69,25 +70,42 @@
       </section>
       <!-- 4. product-cards end -->
 
-      <!-- 5. showcase -->
+      <!-- 5. 랜딩페이지 -->
       <section id="showcase" class="showcase">
          <div class="container">
-            <div class="row">
-               <div class="col"></div>
-            </div>
+            <div class="highlight-text">이제 이 앱 하나면 끝.</div>
          </div>
       </section>
-      <!-- 5. showcase end -->
 
-      <!-- 6. eco-impact -->
-      <section id="eco-impact" class="eco-impact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6"></div>
-               <div class="col-md-6"></div>
+      <!-- 6. 랜딩페이지  -->
+      <!-- 6. 랜딩페이지  -->
+      <section id="service" class="service-section">
+         <div class="service-container">
+            <!-- 왼쪽 카드 -->
+            <div class="service-left">
+               <h5>이렇게 실천할 수 있어요</h5>
+               <h2>Primary Service</h2>
+               <div class="service-card">
+                  <div class="card-media">이미지</div>
+                  <div class="card-content">
+                     <h3>service1</h3>
+                     <p>설명 기입해 주세요</p>
+                  </div>
+               </div>
+            </div>
+            <!-- 오른쪽 카드 -->
+            <div class="service-right">
+               <div class="service-card">
+                  <div class="card-media">이미지</div>
+                  <div class="card-content">
+                     <h3>service2</h3>
+                     <p>설명 기입해 주세요</p>
+                  </div>
+               </div>
             </div>
          </div>
       </section>
+
       <!-- 6. eco-impact end -->
 
       <!-- 7. impact-stats -->
@@ -108,10 +126,55 @@
             </div>
          </div>
       </section>
+
       <!-- 8. partners end -->
 
       <!-- bootstrap 4.6 -->
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+         ;(function () {
+            const track = document.getElementById('cardsTrack')
+            if (!track) return
+
+            const prevBtn = document.querySelector('.cards-nav.prev')
+            const nextBtn = document.querySelector('.cards-nav.next')
+
+            const getStep = () => {
+               // “카드 하나 + 간격”만큼 이동
+               const first = track.querySelector('.card')
+               if (!first) return track.clientWidth * 0.9
+               const style = getComputedStyle(first)
+               const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 16)
+               return first.getBoundingClientRect().width + gap
+            }
+
+            const clamp = () => {
+               // 양끝에서 버튼 비활성화
+               const max = track.scrollWidth - track.clientWidth - 1
+               prevBtn.disabled = track.scrollLeft <= 0
+               nextBtn.disabled = track.scrollLeft >= max
+            }
+
+            const scrollByStep = (dir) => {
+               track.scrollBy({ left: dir * getStep(), behavior: 'smooth' })
+               // 스무스 스크롤 후 버튼 상태 갱신
+               setTimeout(clamp, 300)
+            }
+
+            prevBtn?.addEventListener('click', () => scrollByStep(-1))
+            nextBtn?.addEventListener('click', () => scrollByStep(1))
+
+            // 드래그/스와이프 자연 지원(브라우저 기본 스크롤) + 키보드 접근성
+            track.addEventListener('keydown', (e) => {
+               if (e.key === 'ArrowRight') scrollByStep(1)
+               if (e.key === 'ArrowLeft') scrollByStep(-1)
+            })
+
+            track.addEventListener('scroll', clamp, { passive: true })
+            window.addEventListener('resize', clamp)
+            clamp()
+         })()
+      </script>
    </body>
 </html>
