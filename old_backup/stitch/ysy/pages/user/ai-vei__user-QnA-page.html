@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+      <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet" />
+      <title>Stitch Design</title>
+      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <style type="text/tailwindcss">
+         :root {
+            --point-color: 251, 110, 82;
+            --pending-color: 219, 245, 142;
+            --completed-color: 146, 195, 164;
+         }
+      </style>
+   </head>
+   <body style="font-family: Manrope, 'Noto Sans', sans-serif">
+      <div
+         class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
+         style="
+            --select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(140,102,95)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
+         "
+      >
+         <div class="flex min-h-screen">
+            <aside class="w-64 bg-white p-6 shadow-md">
+               <h2 class="text-xl font-bold mb-8 text-slate-800">Customer Service</h2>
+               <nav class="flex flex-col gap-4">
+                  <a class="flex items-center gap-3 px-4 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors" href="#">
+                     <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" fill-rule="evenodd"></path>
+                     </svg>
+                     <span>FAQ</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-2 text-white bg-[rgb(var(--point-color))] rounded-lg shadow-sm transition-colors" href="#">
+                     <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                     </svg>
+                     <span>1:1 Inquiry</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors" href="#">
+                     <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" d="M10 2a6 6 0 00-6 6v3.586l-1.707 1.707A1 1 0 003 15h14a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zm-4 8a4 4 0 108 0v-.586l.293-.293A1 1 0 0014 8.414V8a4 4 0 00-8 0v.586z" fill-rule="evenodd"></path>
+                     </svg>
+                     <span>Announcements</span>
+                  </a>
+               </nav>
+            </aside>
+            <main class="flex-1 p-8">
+               <div class="max-w-4xl mx-auto">
+                  <h1 class="text-4xl font-bold text-slate-800 mb-8">1:1 Inquiry</h1>
+                  <div class="bg-white p-8 rounded-2xl shadow-lg mb-8">
+                     <h2 class="text-2xl font-bold text-slate-800 mb-6">Submit Inquiry</h2>
+                     <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                           <div>
+                              <label class="block text-sm font-medium text-slate-700 mb-1" for="inquiry-type">Inquiry Type</label>
+                              <select
+                                 class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--point-color))] border border-slate-300 bg-white h-12 px-4 text-base font-normal leading-normal appearance-none bg-no-repeat"
+                                 id="inquiry-type"
+                                 style="background-image: var(--select-button-svg); background-position: right 0.75rem center; background-size: 1.5em 1.5em"
+                              >
+                                 <option>Select Inquiry Type</option>
+                                 <option>Account</option>
+                                 <option>Payment</option>
+                                 <option>Points</option>
+                                 <option>Other</option>
+                              </select>
+                           </div>
+                           <div>
+                              <label class="block text-sm font-medium text-slate-700 mb-1" for="file-attachment">Attach File (Optional)</label>
+                              <input
+                                 class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--point-color))] border border-slate-300 bg-white h-12 placeholder:text-slate-400 p-3 text-base font-normal leading-normal file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-[rgba(var(--point-color),0.1)] file:text-[rgb(var(--point-color))] hover:file:bg-[rgba(var(--point-color),0.2)]"
+                                 id="file-attachment"
+                                 type="file"
+                              />
+                           </div>
+                        </div>
+                        <div>
+                           <label class="block text-sm font-medium text-slate-700 mb-1" for="inquiry-title">Title</label>
+                           <input
+                              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--point-color))] border border-slate-300 bg-white h-12 placeholder:text-slate-400 px-4 text-base font-normal leading-normal"
+                              id="inquiry-title"
+                              placeholder="Enter a title for your inquiry"
+                           />
+                        </div>
+                        <div>
+                           <label class="block text-sm font-medium text-slate-700 mb-1" for="inquiry-content">Content</label>
+                           <textarea
+                              class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--point-color))] border border-slate-300 bg-white min-h-36 placeholder:text-slate-400 p-4 text-base font-normal leading-normal"
+                              id="inquiry-content"
+                              placeholder="Describe your inquiry in detail..."
+                           ></textarea>
+                        </div>
+                        <div class="flex justify-end">
+                           <button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[rgb(var(--point-color))] text-white text-base font-bold leading-normal tracking-wide shadow-md hover:bg-opacity-90 transition-all" type="submit">
+                              <span>Submit</span>
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="bg-white p-8 rounded-2xl shadow-lg mb-8">
+                     <h2 class="text-2xl font-bold text-slate-800 mb-6">Inquiry History</h2>
+                     <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                           <thead>
+                              <tr class="border-b border-slate-200">
+                                 <th class="px-4 py-3 text-sm font-semibold text-slate-600">Title</th>
+                                 <th class="px-4 py-3 text-sm font-semibold text-slate-600">Submission Date</th>
+                                 <th class="px-4 py-3 text-sm font-semibold text-slate-600 text-center">Status</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="border-b border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                 <td class="px-4 py-4 text-slate-800 font-medium">Issue with Points</td>
+                                 <td class="px-4 py-4 text-slate-500">2024-07-26</td>
+                                 <td class="px-4 py-4 text-center">
+                                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[rgb(var(--pending-color))] text-green-800">Pending</span>
+                                 </td>
+                              </tr>
+                              <tr class="border-b border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                 <td class="px-4 py-4 text-slate-800 font-medium">Account Verification</td>
+                                 <td class="px-4 py-4 text-slate-500">2024-07-20</td>
+                                 <td class="px-4 py-4 text-center">
+                                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[rgb(var(--completed-color))] text-white">Completed</span>
+                                 </td>
+                              </tr>
+                              <tr class="hover:bg-slate-50 cursor-pointer">
+                                 <td class="px-4 py-4 text-slate-800 font-medium">Payment Inquiry</td>
+                                 <td class="px-4 py-4 text-slate-500">2024-07-15</td>
+                                 <td class="px-4 py-4 text-center">
+                                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[rgb(var(--completed-color))] text-white">Completed</span>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="bg-white p-8 rounded-2xl shadow-lg">
+                     <h2 class="text-2xl font-bold text-slate-800 mb-2">Issue with Points</h2>
+                     <p class="text-slate-500 text-sm mb-6">Submitted by Alex Carter on 2024-07-26</p>
+                     <div class="space-y-6">
+                        <div>
+                           <h3 class="font-semibold text-slate-800 mb-2">Inquiry Content</h3>
+                           <p class="text-slate-600 leading-relaxed">I noticed that the points I earned from my recent carbon reduction activities are not reflecting in my account balance. Could you please investigate and update my points accordingly?</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-lg">
+                           <h3 class="font-semibold text-slate-800 mb-2">Administrator Reply</h3>
+                           <p class="text-slate-600 leading-relaxed">We are currently investigating the issue with your points. We will update you as soon as we have more information. Thank you for your patience.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </main>
+         </div>
+      </div>
+   </body>
+</html>
