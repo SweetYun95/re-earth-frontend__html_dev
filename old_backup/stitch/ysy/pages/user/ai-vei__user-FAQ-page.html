@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+      <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+      <title>Stitch Design</title>
+      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <style type="text/tailwindcss">
+         :root {
+            --point-color-1: #ffce55;
+            --point-color-2: #fb6e52;
+            --sub-color: #f2f6eb;
+         }
+         .faq-item[open] summary {
+            color: var(--point-color-1);
+            font-weight: 700;
+         }
+      </style>
+   </head>
+   <body class="bg-[var(--sub-color)]">
+      <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden" style="font-family: Manrope, 'Noto Sans', sans-serif">
+         <div class="flex h-full grow flex-col">
+            <div class="flex flex-1">
+               <aside class="flex flex-col w-64 bg-white p-6 shrink-0">
+                  <div class="flex flex-col gap-4">
+                     <h2 class="text-lg font-bold text-gray-800">Customer Service</h2>
+                     <nav class="flex flex-col gap-2">
+                        <a class="flex items-center gap-3 rounded-lg bg-[var(--point-color-1)] px-4 py-2 text-gray-900 font-bold" href="#">
+                           <span class="material-icons">quiz</span>
+                           <span>FAQ</span>
+                        </a>
+                        <a class="flex items-center gap-3 rounded-lg px-4 py-2 text-gray-600 hover:bg-gray-100" href="#">
+                           <span class="material-icons">support_agent</span>
+                           <span>1:1 Inquiry</span>
+                        </a>
+                        <a class="flex items-center gap-3 rounded-lg px-4 py-2 text-gray-600 hover:bg-gray-100" href="#">
+                           <span class="material-icons">campaign</span>
+                           <span>Announcements</span>
+                        </a>
+                     </nav>
+                  </div>
+               </aside>
+               <main class="flex-1 p-8">
+                  <div class="flex flex-col gap-8">
+                     <div class="flex items-center justify-between">
+                        <h1 class="text-4xl font-bold text-gray-800">Frequently Asked Questions (FAQ)</h1>
+                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-[var(--point-color-2)] text-white text-base font-bold leading-normal tracking-wide shadow-lg hover:shadow-xl transition-shadow">
+                           <span class="truncate">Register 1:1 Inquiry</span>
+                        </button>
+                     </div>
+                     <div class="bg-white rounded-2xl p-6 shadow-md">
+                        <p class="text-gray-600 mb-4">Search for keywords or filter by category to find answers to your questions.</p>
+                        <div class="flex items-center gap-4 mb-4">
+                           <div class="relative flex-1">
+                              <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+                              <input
+                                 class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-[var(--point-color-1)] border border-gray-300 bg-gray-50 h-14 placeholder:text-gray-400 pl-12 pr-4 text-base font-normal leading-normal"
+                                 placeholder="Search for questions"
+                                 value=""
+                              />
+                           </div>
+                           <div class="flex gap-2">
+                              <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 px-4 text-gray-700 hover:bg-gray-200">
+                                 <p class="text-sm font-medium">Donations</p>
+                              </button>
+                              <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 px-4 text-gray-700 hover:bg-gray-200">
+                                 <p class="text-sm font-medium">Points</p>
+                              </button>
+                              <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 px-4 text-gray-700 hover:bg-gray-200">
+                                 <p class="text-sm font-medium">Shop</p>
+                              </button>
+                              <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 px-4 text-gray-700 hover:bg-gray-200">
+                                 <p class="text-sm font-medium">Account</p>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="flex flex-col gap-6">
+                        <div>
+                           <h2 class="text-2xl font-bold text-gray-800 px-2 pb-4">Donations</h2>
+                           <div class="flex flex-col gap-3">
+                              <details class="faq-item flex flex-col rounded-2xl border-transparent bg-white px-6 py-4 shadow-md transition-all duration-300" open="">
+                                 <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2 text-lg font-medium text-gray-800">
+                                    Is cash donation possible?
+                                    <div class="text-gray-500 transition-transform duration-300 group-open:rotate-180">
+                                       <span class="material-icons">expand_more</span>
+                                    </div>
+                                 </summary>
+                                 <p class="text-gray-600 text-base font-normal leading-relaxed pt-2">Currently, we only accept donations through our partner organizations. Please check our donation page for more details.</p>
+                              </details>
+                              <details class="faq-item flex flex-col rounded-2xl border-transparent bg-white px-6 py-4 shadow-md transition-all duration-300">
+                                 <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2 text-lg font-medium text-gray-800">
+                                    Can I get a donation receipt?
+                                    <div class="text-gray-500 transition-transform duration-300 group-open:rotate-180">
+                                       <span class="material-icons">expand_more</span>
+                                    </div>
+                                 </summary>
+                                 <p class="text-gray-600 text-base font-normal leading-relaxed pt-2">Yes, donation receipts are available through our partner organizations. You can request one after your donation is processed.</p>
+                              </details>
+                              <details class="faq-item flex flex-col rounded-2xl border-transparent bg-white px-6 py-4 shadow-md transition-all duration-300">
+                                 <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2 text-lg font-medium text-gray-800">
+                                    How are donated items used?
+                                    <div class="text-gray-500 transition-transform duration-300 group-open:rotate-180">
+                                       <span class="material-icons">expand_more</span>
+                                    </div>
+                                 </summary>
+                                 <p class="text-gray-600 text-base font-normal leading-relaxed pt-2">Donated items are distributed to those in need through our network of charitable partners, supporting various social and environmental causes.</p>
+                              </details>
+                              <details class="faq-item flex flex-col rounded-2xl border-transparent bg-white px-6 py-4 shadow-md transition-all duration-300">
+                                 <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2 text-lg font-medium text-gray-800">
+                                    Can donations be rejected?
+                                    <div class="text-gray-500 transition-transform duration-300 group-open:rotate-180">
+                                       <span class="material-icons">expand_more</span>
+                                    </div>
+                                 </summary>
+                                 <p class="text-gray-600 text-base font-normal leading-relaxed pt-2">In rare cases, donations may be rejected if they do not meet our partner's guidelines. Please refer to our donation policy for more information.</p>
+                              </details>
+                           </div>
+                        </div>
+                        <div>
+                           <h2 class="text-2xl font-bold text-gray-800 px-2 pb-4 pt-6">Points</h2>
+                           <div class="flex flex-col gap-3">
+                              <details class="faq-item flex flex-col rounded-2xl border-transparent bg-white px-6 py-4 shadow-md transition-all duration-300">
+                                 <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2 text-lg font-medium text-gray-800">
+                                    How do I earn points?
+                                    <div class="text-gray-500 transition-transform duration-300 group-open:rotate-180">
+                                       <span class="material-icons">expand_more</span>
+                                    </div>
+                                 </summary>
+                                 <p class="text-gray-600 text-base font-normal leading-relaxed pt-2">
+                                    You can earn points by participating in various carbon reduction activities, such as using public transport, reducing energy consumption, and more. Check the 'Earn Points' section in the app for a full list of activities.
+                                 </p>
+                              </details>
+                              <details class="faq-item flex flex-col rounded-2xl border-transparent bg-white px-6 py-4 shadow-md transition-all duration-300">
+                                 <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2 text-lg font-medium text-gray-800">
+                                    What can I do with points?
+                                    <div class="text-gray-500 transition-transform duration-300 group-open:rotate-180">
+                                       <span class="material-icons">expand_more</span>
+                                    </div>
+                                 </summary>
+                                 <p class="text-gray-600 text-base font-normal leading-relaxed pt-2">You can use your points to purchase eco-friendly products in our shop, or donate them to support environmental projects.</p>
+                              </details>
+                              <details class="faq-item flex flex-col rounded-2xl border-transparent bg-white px-6 py-4 shadow-md transition-all duration-300">
+                                 <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2 text-lg font-medium text-gray-800">
+                                    Do points expire?
+                                    <div class="text-gray-500 transition-transform duration-300 group-open:rotate-180">
+                                       <span class="material-icons">expand_more</span>
+                                    </div>
+                                 </summary>
+                                 <p class="text-gray-600 text-base font-normal leading-relaxed pt-2">Yes, points expire 12 months after they are earned. We'll notify you before your points are about to expire.</p>
+                              </details>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </main>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
