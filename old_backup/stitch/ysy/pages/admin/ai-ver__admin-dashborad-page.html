@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <title>Fintech Eco Dashboard</title>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <link href="https://fonts.googleapis.com" rel="preconnect" />
+      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <style type="text/tailwindcss">
+         :root {
+            --page-bg: #f2f6eb;
+            --primary-text: #333333;
+            --secondary-text: #9e9e9e;
+            --accent-color: #ffce55;
+            --sub-color: #568265;
+            --accent-highlight: #fb6e52;
+            --widget-bg: #ffffff;
+            --border-color: #e0e0e0;
+         }
+         body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--page-bg);
+            color: var(--primary-text);
+         }
+         .sidebar {
+            background-color: var(--accent-color);
+         }
+         .sidebar .active {
+            background-color: var(--sub-color);
+            color: white;
+         }
+         .widget {
+            background-color: var(--widget-bg);
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+         }
+         .widget-title {
+            color: var(--primary-text);
+            font-weight: 700;
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            margin-bottom: 1rem;
+         }
+         .metric-highlight {
+            color: var(--accent-highlight);
+         }
+         .table th {
+            color: var(--primary-text);
+            font-weight: 500;
+            text-align: left;
+            padding: 0.75rem 1rem;
+         }
+         .table td {
+            color: var(--secondary-text);
+            padding: 1rem 1rem;
+            border-top: 1px solid var(--border-color);
+         }
+         .table tr:first-child td {
+            border-top: none;
+         }
+         .table .primary-cell-text {
+            color: var(--primary-text);
+         }
+      </style>
+   </head>
+   <body>
+      <div class="flex min-h-screen bg-[var(--page-bg)]">
+         <aside class="sidebar w-64 shrink-0 p-6 flex flex-col justify-between">
+            <div>
+               <div class="flex items-center gap-4 mb-8">
+                  <img alt="Admin avatar" class="size-12 rounded-full" src="https://lh3.googleusercontent.com/a/ACg8ocK_3_x7lqZd9e_vzqjY5d92tF1Tz0_qY8pX4Yk9G7r5z3Y=s96-c" />
+                  <span class="font-bold text-lg text-black">Administrator</span>
+               </div>
+               <nav class="flex flex-col gap-2">
+                  <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-black hover:bg-[var(--sub-color)] hover:text-white transition-colors" href="#">
+                     <span class="material-symbols-outlined">settings</span>
+                     <span class="font-medium">Dashboard Settings</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-black hover:bg-[var(--sub-color)] hover:text-white transition-colors" href="#">
+                     <span class="material-symbols-outlined">group</span>
+                     <span class="font-medium">User Management</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-black hover:bg-[var(--sub-color)] hover:text-white transition-colors" href="#">
+                     <span class="material-symbols-outlined">directions_bus</span>
+                     <span class="font-medium">Transport Integration</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-black hover:bg-[var(--sub-color)] hover:text-white transition-colors" href="#">
+                     <span class="material-symbols-outlined">groups</span>
+                     <span class="font-medium">Community</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-black hover:bg-[var(--sub-color)] hover:text-white transition-colors" href="#">
+                     <span class="material-symbols-outlined">bar_chart</span>
+                     <span class="font-medium">Statistics</span>
+                  </a>
+                  <a class="active flex items-center gap-3 px-4 py-3 rounded-lg" href="#">
+                     <span class="material-symbols-outlined">home</span>
+                     <span class="font-medium">Dashboard Main</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-black hover:bg-[var(--sub-color)] hover:text-white transition-colors" href="#">
+                     <span class="material-symbols-outlined">volunteer_activism</span>
+                     <span class="font-medium">Donations</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-black hover:bg-[var(--sub-color)] hover:text-white transition-colors" href="#">
+                     <span class="material-symbols-outlined">storefront</span>
+                     <span class="font-medium">Point Shop</span>
+                  </a>
+                  <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-black hover:bg-[var(--sub-color)] hover:text-white transition-colors" href="#">
+                     <span class="material-symbols-outlined">handshake</span>
+                     <span class="font-medium">Partnerships</span>
+                  </a>
+               </nav>
+            </div>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-black hover:bg-[var(--sub-color)] hover:text-white transition-colors" href="#">
+               <span class="material-symbols-outlined">settings</span>
+               <span class="font-medium">Settings</span>
+            </a>
+         </aside>
+         <main class="flex-1 p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+               <div class="widget lg:col-span-2">
+                  <h3 class="widget-title">Daily Points Earned</h3>
+                  <p class="text-4xl font-bold metric-highlight">12,345</p>
+                  <div class="flex items-center gap-2 mt-1">
+                     <p class="text-sm text-[var(--secondary-text)]">Last 7 Days</p>
+                     <p class="text-sm font-medium text-green-600">+12%</p>
+                  </div>
+                  <div class="h-60 mt-4">
+                     <svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25"
+                           stroke="#568265"
+                           stroke-linecap="round"
+                           stroke-width="3"
+                        ></path>
+                        <path
+                           d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V150H0V109Z"
+                           fill="url(#paint0_linear_1131_5935)"
+                        ></path>
+                        <defs>
+                           <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1131_5935" x1="236" x2="236" y1="1" y2="150">
+                              <stop stop-color="#568265" stop-opacity="0.2"></stop>
+                              <stop offset="1" stop-color="#568265" stop-opacity="0"></stop>
+                           </linearGradient>
+                        </defs>
+                     </svg>
+                  </div>
+               </div>
+               <div class="widget">
+                  <h3 class="widget-title">User Contribution</h3>
+                  <p class="text-4xl font-bold metric-highlight">67%</p>
+                  <div class="flex items-center gap-2 mt-1">
+                     <p class="text-sm text-[var(--secondary-text)]">vs. Last Month</p>
+                     <p class="text-sm font-medium text-red-600">-5%</p>
+                  </div>
+                  <div class="mt-6 space-y-4">
+                     <div>
+                        <div class="flex justify-between text-sm font-medium text-[var(--secondary-text)] mb-1">
+                           <span>Walking</span>
+                           <span>70%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                           <div class="bg-[var(--sub-color)] h-2.5 rounded-full" style="width: 70%"></div>
+                        </div>
+                     </div>
+                     <div>
+                        <div class="flex justify-between text-sm font-medium text-[var(--secondary-text)] mb-1">
+                           <span>Cycling</span>
+                           <span>50%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                           <div class="bg-[var(--sub-color)] h-2.5 rounded-full" style="width: 50%"></div>
+                        </div>
+                     </div>
+                     <div>
+                        <div class="flex justify-between text-sm font-medium text-[var(--secondary-text)] mb-1">
+                           <span>Public Transport</span>
+                           <span>90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                           <div class="bg-[var(--sub-color)] h-2.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="widget lg:col-span-2">
+                  <h3 class="widget-title">Donation Ranking</h3>
+                  <table class="w-full table">
+                     <thead>
+                        <tr>
+                           <th>Rank</th>
+                           <th>Donor/Organization</th>
+                           <th class="text-right">Amount</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td class="primary-cell-text">1</td>
+                           <td class="primary-cell-text font-medium">Eco Warriors Inc.</td>
+                           <td class="text-right font-medium">$5,000</td>
+                        </tr>
+                        <tr>
+                           <td class="primary-cell-text">2</td>
+                           <td class="primary-cell-text font-medium">Green Earth Foundation</td>
+                           <td class="text-right font-medium">$4,500</td>
+                        </tr>
+                        <tr>
+                           <td class="primary-cell-text">3</td>
+                           <td class="primary-cell-text font-medium">Sustainable Future Group</td>
+                           <td class="text-right font-medium">$4,000</td>
+                        </tr>
+                        <tr>
+                           <td class="primary-cell-text">4</td>
+                           <td class="primary-cell-text font-medium">Community Action Network</td>
+                           <td class="text-right font-medium">$3,500</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="grid grid-cols-2 gap-8">
+                  <div class="widget text-center">
+                     <h3 class="widget-title">Active Users</h3>
+                     <p class="text-4xl font-bold metric-highlight">2,345</p>
+                  </div>
+                  <div class="widget text-center">
+                     <h3 class="widget-title">Inquiries</h3>
+                     <div class="flex justify-around items-center h-full">
+                        <div>
+                           <p class="text-3xl font-bold text-[var(--sub-color)]">150</p>
+                           <p class="text-sm text-[var(--secondary-text)]">Processed</p>
+                        </div>
+                        <div>
+                           <p class="text-3xl font-bold text-red-500">25</p>
+                           <p class="text-sm text-[var(--secondary-text)]">Unprocessed</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="widget lg:col-span-3">
+                  <h3 class="widget-title">Recent Community Posts</h3>
+                  <table class="w-full table">
+                     <thead>
+                        <tr>
+                           <th>Title</th>
+                           <th>Author</th>
+                           <th class="text-right">Date</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td class="primary-cell-text font-medium">Tips for Reducing Your Carbon Footprint</td>
+                           <td>Emily Carter</td>
+                           <td class="text-right">2023-11-15</td>
+                        </tr>
+                        <tr>
+                           <td class="primary-cell-text font-medium">Sustainable Living in Urban Areas</td>
+                           <td>David Lee</td>
+                           <td class="text-right">2023-11-10</td>
+                        </tr>
+                        <tr>
+                           <td class="primary-cell-text font-medium">The Impact of Public Transport on the Environment</td>
+                           <td>Sarah Jones</td>
+                           <td class="text-right">2023-11-05</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </main>
+      </div>
+   </body>
+</html>
