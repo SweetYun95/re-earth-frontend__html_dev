@@ -1,3 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+* {
+   box-sizing: border-box;
+}
+
+body {
+   min-height: 100vh;
+   font-family: 'Fira Sans', sans-serif;
+   display: flex;
+}
+
+.container {
+   padding: 0;
+   margin: 0 auto;
+   max-width: 1200px;
+   display: block;
+}
+.features__card {
+   display: block;
+}
+.blog-slider {
+   width: 95%;
+   position: relative;
+   max-width: 1000px;
+   margin: auto;
+   background: #fff;
+   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+   padding: 1.5rem;
+   border: 1px solid #f5f5f5;
+   border-radius: 12px;
+   height: 400px;
+   transition: all 0.3s;
+   overflow: visible !important;
+}
+@media screen and (max-width: 992px) {
+   .blog-slider {
+      max-width: 680px;
+      height: 400px;
+   }
+}
+@media screen and (max-width: 768px) {
+   .blog-slider {
+      min-height: 500px;
+      height: auto;
+      margin: 180px auto;
+   }
+}
+@media screen and (max-height: 500px) and (min-width: 992px) {
+   .blog-slider {
+      height: 350px;
+   }
+}
+.blog-slider__item {
+   display: flex;
+   align-items: center;
+}
+@media screen and (max-width: 768px) {
+   .blog-slider__item {
+      flex-direction: column;
+   }
+}
+.blog-slider__item.swiper-slide-active .blog-slider__img img {
+   opacity: 1;
+   transition-delay: 0.3s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > * {
+   opacity: 1;
+   transform: none;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(1) {
+   transition-delay: 0.3s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(2) {
+   transition-delay: 0.4s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(3) {
+   transition-delay: 0.5s;
+}
+
+.blog-slider__img {
+   width: 370px;
+   flex-shrink: 0;
+   height: 295px;
+   border-radius: 20px;
+   transform: translateX(-80px);
+}
+.blog-slider__img img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   opacity: 0;
+   border-radius: 20px;
+   transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+   .blog-slider__img {
+      transform: translateY(-50%);
+      width: 90%;
+   }
+}
+@media screen and (max-width: 576px) {
+   .blog-slider__img {
+      width: 95%;
+   }
+}
+@media screen and (max-height: 500px) and (min-width: 992px) {
+   .blog-slider__img {
+      height: 270px;
+   }
+}
+.blog-slider__content {
+   padding-right: 25px;
+}
+@media screen and (max-width: 768px) {
+   .blog-slider__content {
+      margin-top: -80px;
+      text-align: center;
+      padding: 0 30px;
+   }
+}
+@media screen and (max-width: 576px) {
+   .blog-slider__content {
+      padding: 0;
+   }
+}
+.blog-slider__content > * {
+   opacity: 0;
+   transform: translateY(25px);
+   transition: all 0.4s;
+}
+.blog-slider__code {
+   color: #7b7992;
+   margin-bottom: 15px;
+   display: block;
+   font-weight: 500;
+}
+.blog-slider__title {
+   font-size: 24px;
+   font-weight: 700;
+   color: #0d0925;
+   margin-bottom: 20px;
+}
+.blog-slider__text {
+   color: #4e4a67;
+   margin-bottom: 30px;
+   line-height: 1.5em;
+}
+
+.blog-slider .swiper-container-horizontal > .swiper-pagination-bullets,
+.blog-slider .swiper-pagination-custom,
+.blog-slider .swiper-pagination-fraction {
+   bottom: 10px;
+   left: 0;
+   width: 100%;
+}
+.blog-slider__pagination {
+   position: absolute;
+   z-index: 21;
+   right: 20px;
+   width: 11px !important;
+   text-align: center;
+   left: auto !important;
+   top: 50%;
+   bottom: auto !important;
+   transform: translateY(-50%);
+}
+@media screen and (max-width: 768px) {
+   .blog-slider__pagination {
+      transform: translateX(-50%);
+      left: 50% !important;
+      top: 205px;
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+.blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+   margin: 8px 0;
+}
+@media screen and (max-width: 768px) {
+   .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 5px;
+   }
+}
+.blog-slider__pagination .swiper-pagination-bullet {
+   width: 11px;
+   height: 11px;
+   display: block;
+   border-radius: 10px;
+   background: rgba(86, 130, 101);
+   opacity: 0.2;
+   transition: all 0.3s;
+}
+.blog-slider__pagination .swiper-pagination-bullet-active {
+   opacity: 1;
+   height: 30px;
+   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+}
+@media screen and (max-width: 768px) {
+   .blog-slider__pagination .swiper-pagination-bullet-active {
+      height: 11px;
+      width: 30px;
+   }
+}
+
 /*    aside: 빠른 이동 내비게이션    */
 
 /* aside end */
@@ -18,18 +225,268 @@
 
 /* 4. product-cards end */
 
-/*    5. showcase    */
+/*    5. 랜딩페이지     */
+.showcase {
+   text-align: center;
+   padding: 200px 40px;
+   background: #f9f9f9;
+}
+.highlight-text {
+   font-size: 2rem;
+   font-weight: 800;
+   color: #000;
+   text-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
 
-/* 5. showcase end */
+/* 6. 랜딩페이지  */
 
-/*   6. eco-impact    */
+.service-container {
+   display: flex;
+   justify-content: center;
+   gap: 200px;
+   flex-wrap: wrap;
+   padding: 200px 40px;
+}
 
-/* 6. eco-impact end */
+.service-left {
+   display: flex;
+   flex-direction: column;
+}
+
+.service-left h2 {
+   font-size: 24px;
+}
+
+.service-card {
+   width: 280px;
+   background: #fff;
+   border-radius: 20px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   text-align: left;
+}
+
+.card-media {
+   height: 160px;
+   background: #e0e0e0;
+   border-radius: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #888;
+   font-size: 14px;
+}
+.card-content {
+   background: #f0f0f0;
+   border-radius: 14px;
+   padding: 14px 16px;
+}
+.card-content h3 {
+   margin: 0 0 8px;
+   font-size: 18px;
+   font-weight: 700;
+   color: #222;
+}
+.card-content p {
+   margin: 0;
+   color: #333;
+   line-height: 1.6;
+}
+
+.service-card:hover {
+   width: 300px;
+}
+.cards-nav {
+   display: none;
+}
+/* ========= 모바일 전용 ========= */
+@media (max-width: 768px) {
+   .cards-section {
+      position: relative;
+   }
+
+   .cards-wrapper {
+      position: relative;
+      /* 버튼을 카드 영역 위에 겹치기 위해 기준 컨테이너 */
+      padding: 0 12px; /* 좌우 버튼 여백 조금 */
+   }
+
+   .cards-track {
+      display: flex;
+      gap: 12px; /* 카드 간격 */
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      padding: 8px 4px 16px; /* 손가락 스와이프 여유 */
+   }
+
+   .cards-track::-webkit-scrollbar {
+      display: none;
+   }
+   .cards-track {
+      scrollbar-width: none;
+   }
+
+   .card {
+      flex: 0 0 auto; /* 줄바꿈 막고 가로로 나열 */
+      min-width: 85%; /* 한 화면에 카드 1장 위주, 살짝 옆이 보이게 */
+      scroll-snap-align: start; /* 카드 단위로 딱딱 멈춤 */
+      /* 기존 카드 스타일(색/그림자/패딩)은 그대로 두세요 */
+   }
+
+   /* 좌우 네비 버튼 */
+   .cards-nav {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 5;
+      backdrop-filter: blur(2px);
+   }
+   .cards-nav.prev {
+      left: 4px;
+   }
+   .cards-nav.next {
+      right: 4px;
+   }
+   .cards-nav:disabled {
+      opacity: 0.35;
+      cursor: default;
+   }
+
+   /* 좌우 페이드(선택사항: 가장자리 시야 유도) */
+   .cards-wrapper::before,
+   .cards-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 28px;
+      pointer-events: none;
+      z-index: 4;
+   }
+   .cards-wrapper::before {
+      left: 0;
+      background: linear-gradient(to right, var(--page-bg, #fff) 30%, transparent);
+   }
+   .cards-wrapper::after {
+      right: 0;
+      background: linear-gradient(to left, var(--page-bg, #fff) 30%, transparent);
+   }
+}
+
+/* ========= 태블릿(옵션) ========= */
+@media (min-width: 769px) and (max-width: 1024px) {
+   .cards-track {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+   }
+   .card {
+      min-width: auto;
+   }
+}
 
 /*   7. impact-stats    */
+.impact-stats {
+   /* 섹션 자체 여백은 Bootstrap로도 충분하면 생략 가능 */
+   padding: 72px 0;
+}
+
+/* 성과 지표 영역 */
+.impact-metrics {
+   margin-bottom: 32px; /* CTA와의 간격 */
+}
+.impact-metrics h2 {
+   margin: 0; /* 기본 h2 여백 제거 */
+   line-height: 1.2; /* 타이틀 줄간격 살짝 촘촘하게 */
+   font-weight: 700;
+   font-size: 3rem;
+}
+.impact-metrics p {
+   margin: 6px 0 0; /* 위 h2와의 간격만 좁게 */
+   line-height: 1.25; /* 문장 줄간격도 살짝 타이트하게 */
+}
+/* 숫자 강조(임시) – 팀에서 토큰/컬러 확정되면 교체 */
+.impact-metrics span {
+   font-weight: 700;
+}
+
+/* 참여 유도 영역 */
+.impact-cta p {
+   margin: 0 0 8px;
+   line-height: 1.25;
+}
+.impact-cta h3 {
+   margin: 0 0 8px; /* 버튼 상단/하단 간격 */
+   font-size: 1rem; /* h3지만 시각적 크기는 소제목 정도로 */
+   font-weight: 600;
+}
+.impact-cta h3 a {
+   padding: 10px 50px;
+   font-size: 2rem;
+   border-radius: 100px;
+}
+.impact-cta a + a {
+   margin-left: 8px; /* 버튼/링크 사이 최소 간격 */
+}
+
+/* 모바일에서 세로 여백 조금 여유 */
+@media (max-width: 576px) {
+   .impact-stats {
+      padding: 56px 0;
+   }
+   .impact-metrics {
+      margin-bottom: 24px;
+   }
+}
 
 /* 7. impact-stats end */
 
 /*    8. partners    */
+/* 협력사 텍스트 영역 */
+.partners-heading {
+   padding: 20px;
+}
+
+.partners-heading p {
+   margin: 0; /* p태그 기본 여백 제거 */
+   line-height: 1.2; /* 줄간격 살짝 좁게 */
+   font-size: 1.2rem;
+}
+
+.partners-heading .partner-title {
+   font-weight: bold; /* 굵게 */
+   font-size: 1.7rem; /* 필요시 크기도 조절 */
+}
+/* 협력사 텍스트 영역 끝 */
+
+/* 협력사 슬라이드 영역 (Swiper 구조) */
+.swiper {
+   padding: 20px;
+}
+
+.partner-logo {
+   width: 140px;
+   height: 48px;
+}
+/* 스타일은 팀에서 채울 영역: 클래스만 참조용으로 남김
+.partners-slider__prev,
+.partners-slider__next {
+}
+.partners-slider__pagination {
+} */
+/* 협력사 슬라이드 영역 (Swiper 구조) 끝 */
 
 /* 8. partners end */
